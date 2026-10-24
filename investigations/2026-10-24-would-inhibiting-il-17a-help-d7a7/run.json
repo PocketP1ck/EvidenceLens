@@ -1,0 +1,29 @@
+{
+  "id": "2026-10-24-would-inhibiting-il-17a-help-d7a7",
+  "goal": "Would inhibiting IL-17A help patients with Crohn's disease?",
+  "context": {
+    "target": "IL17A",
+    "disease": "Crohn's disease",
+    "compound": "secukinumab"
+  },
+  "model": "claude-sonnet-5-5",
+  "status": "completed",
+  "createdAt": "2026-10-24T18:42:22.942Z",
+  "steps": 7,
+  "usage": {
+    "inputTokens": 16,
+    "outputTokens": 7130,
+    "cacheReadTokens": 61383,
+    "cacheWriteTokens": 17508,
+    "usd": 0.121241,
+    "calls": 7
+  },
+  "limits": {
+    "perRunCapUsd": 1.5,
+    "maxSteps": 40
+  },
+  "stopReason": "Brief finalized",
+  "title": "IL-17A inhibition (secukinumab) in Crohn's disease: evidence against benefit",
+  "assessment": "opposed",
+  "finishedAt": "2026-10-24T18:43:09.619Z"
+}

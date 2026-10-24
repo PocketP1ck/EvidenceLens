@@ -201,7 +201,7 @@ export async function runInvestigation(opts: RunOptions): Promise<RunResult> {
 async function executeTool(use: Anthropic.Messages.ToolUseBlock, ctx: ToolContext, emit: (e: NewRunEvent) => Promise<void>): Promise<ToolResultBlockParam> {
   const def = TOOL_BY_NAME.get(use.name);
   if (!def) return { type: "tool_result", tool_use_id: use.id, is_error: true, content: `Unknown tool ${use.name}` };
-  const parsed = def.schema.safeParse(use.input);
+  const parsed = def.schema.safeParse(coerceJsonStrings(use.input));
   if (!parsed.success) {
     const issues = parsed.error.issues.map((i) => `${i.path.join(".") || "(root)"}: ${i.message}`).join("; ");
     await emit({ type: "tool_result", tool: use.name, ok: false, summary: `Invalid input: ${issues}` });
@@ -221,6 +221,24 @@ async function executeTool(use: Anthropic.Messages.ToolUseBlock, ctx: ToolContex
     await emit({ type: "tool_result", tool: def.name, ok: false, summary: msg.slice(0, 300) });
     return { type: "tool_result", tool_use_id: use.id, is_error: true, content: msg };
   }
+}
+
+/** Models occasionally send arrays/objects as JSON strings; parse those top-level values before validation. */
+export function coerceJsonStrings(input: unknown): unknown {
+  if (!input || typeof input !== "object" || Array.isArray(input)) return input;
+  const out: Record<string, unknown> = {};
+  for (const [k, v] of Object.entries(input)) {
+    if (typeof v === "string" && /^\s*[[{]/.test(v)) {
+      try {
+        out[k] = JSON.parse(v);
+        continue;
+      } catch {
+        /* keep the original string */
+      }
+    }
+    out[k] = v;
+  }
+  return out;
 }
 
 function appendText(messages: MessageParam[], text: string) {

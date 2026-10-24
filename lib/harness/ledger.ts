@@ -71,6 +71,18 @@ function identifierKeys(ids: Identifiers): string[] {
   return keys;
 }
 
+/**
+ * Sponsor study-ID key for trial registrations. Extension registrations usually reuse the
+ * core protocol ID with a suffix (e.g. CAIN457A2202 → CAIN457A2202E1), so both map to one key.
+ */
+export function protocolKey(rec: SourceRecord): string | null {
+  if (rec.kind !== "trial") return null;
+  const d = rec.data as { orgStudyId?: string; sponsor?: string };
+  if (!d.orgStudyId || d.orgStudyId.length < 6) return null;
+  const base = d.orgStudyId.toUpperCase().replace(/[-_ ]?(E\d{1,2}|EXT\d*|OLE\d*)$/, "");
+  return `protocol:${(d.sponsor ?? "").toLowerCase()}:${base}`;
+}
+
 export class EvidenceLedger {
   readonly sources = new Map<string, SourceRecord>();
   readonly findings: Finding[] = [];
@@ -144,7 +156,8 @@ export class EvidenceLedger {
     const keyOwner = new Map<string, string>();
     const shared = new Map<string, Set<string>>();
     for (const [id, rec] of this.sources) {
-      const keys = [...identifierKeys(rec.identifiers), ...rec.linked.flatMap(identifierKeys)];
+      const proto = protocolKey(rec);
+      const keys = [...identifierKeys(rec.identifiers), ...rec.linked.flatMap(identifierKeys), ...(proto ? [proto] : [])];
       for (const k of keys) {
         const owner = keyOwner.get(k);
         if (owner) {
@@ -165,11 +178,13 @@ export class EvidenceLedger {
       .filter((g) => g.length > 1)
       .map((sourceIds) => {
         const keys = [...shared.entries()].filter(([, s]) => [...s].some((x) => sourceIds.includes(x))).map(([k]) => k);
-        const trial = sourceIds.find((s) => s.startsWith("ctgov:"));
-        const pub = sourceIds.find((s) => s.startsWith("pmid:"));
+        const names = [...sourceIds]
+          .sort()
+          .slice(0, 4)
+          .map((s) => s.replace(/^ctgov:/, "").replace(/^pmid:/, "PMID ").replace(/^pmcid:/, ""));
         return {
           id: `C${++n}`,
-          label: `Linked records (${[trial, pub].filter(Boolean).join(" ↔ ") || sourceIds[0]}): one study or report, not independent corroboration`,
+          label: `Linked records (${names.join(" ↔ ")}): one study or report, not independent corroboration`,
           sourceIds,
           sharedIdentifiers: keys,
         };

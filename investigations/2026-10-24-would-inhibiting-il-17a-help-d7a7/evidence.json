@@ -1,0 +1,230 @@
+{
+  "findings": [
+    {
+      "claim": "Secukinumab 10 mg/kg IV (days 1 and 22) did not improve CDAI vs placebo at week 6 in moderate-to-severe Crohn's disease; the change was numerically worse on drug, and the trial stopped early for futility.",
+      "direction": "opposes",
+      "outcome": "negative",
+      "kind": "observation",
+      "sourceIds": [
+        "ctgov:NCT00584740"
+      ],
+      "supportingPassage": "AIN457: -29.2 ± 14.0 (n=39); Placebo: -63.1 ± 13.9 (n=20)",
+      "intervention": "secukinumab (AIN457) 10 mg/kg IV x2",
+      "disease": "Crohn's disease",
+      "population": "Adults, CDAI 220-450, n=59 (39 drug/20 placebo)",
+      "endpoint": "Mean change in CDAI at 6 weeks",
+      "studyContext": "Phase 2 randomized double-blind, terminated for futility at interim analysis",
+      "limitations": "Small, short, single phase 2 trial; one dose regimen; the placebo response was large.",
+      "id": "F1",
+      "independentStudies": 1,
+      "recordedAt": "2026-10-24T18:42:48.631Z"
+    },
+    {
+      "claim": "Published report concluded IL-17A blockade with secukinumab was ineffective in active Crohn's disease, with more adverse events (including infections, with fungal infections only on drug) than placebo.",
+      "direction": "opposes",
+      "outcome": "negative",
+      "kind": "observation",
+      "sourceIds": [
+        "pmid:22595313"
+      ],
+      "supportingPassage": "Blockade of IL-17A was ineffective and higher rates of adverse events were noted compared with placebo.",
+      "intervention": "secukinumab 2×10 mg/kg IV",
+      "disease": "Crohn's disease",
+      "population": "59 patients with moderate to severe CD",
+      "endpoint": "Probability of CDAI reduction ≥50 points over placebo at week 6; safety",
+      "studyContext": "Same study as NCT00584740 (results publication), not independent corroboration",
+      "limitations": "Small proof-of-concept; Bayesian primary analysis with historical placebo; 8/39 drug vs 2/20 placebo stopped for insufficient effect.",
+      "id": "F2",
+      "independentStudies": 1,
+      "recordedAt": "2026-10-24T18:42:48.633Z"
+    },
+    {
+      "claim": "Case series report new-onset or worsening IBD in patients treated with IL-17 inhibitors (including secukinumab) for psoriasis/spondyloarthritis, suggesting a possible protective role of IL-17A in the gut. Causality is not established.",
+      "direction": "opposes",
+      "outcome": "not_applicable",
+      "kind": "observation",
+      "sourceIds": [
+        "pmcid:PMC7958765"
+      ],
+      "supportingPassage": "IL-17A inhibitors are rarely associated with new or worsening inflammatory bowel disease (IBD)",
+      "intervention": "IL-17 inhibitors (secukinumab, ixekizumab, brodalumab)",
+      "disease": "IBD arising in psoriasis/PsA/AS patients",
+      "species": "human",
+      "studyContext": "Conference abstract case series",
+      "limitations": "Case reports; no denominator or control; abstract excerpt only; different populations from Crohn's trial.",
+      "id": "F3",
+      "independentStudies": 1,
+      "recordedAt": "2026-10-24T18:42:48.634Z"
+    },
+    {
+      "claim": "Open Targets gives a low overall IL17A–Crohn disease association (0.1), driven mainly by literature (0.503), with modest clinical (0.137) and RNA expression (0.126) evidence. This is a ranking, not a probability of success.",
+      "direction": "context",
+      "outcome": "not_applicable",
+      "kind": "observation",
+      "sourceIds": [
+        "ot:ENSG00000112115:MONDO_0005011"
+      ],
+      "supportingPassage": "Overall association score 0.1 (datatypes: literature 0.503, clinical 0.137, rna_expression 0.126)",
+      "disease": "Crohn disease",
+      "id": "F4",
+      "independentStudies": 1,
+      "recordedAt": "2026-10-24T18:42:48.634Z"
+    },
+    {
+      "claim": "Secukinumab is an IL-17A inhibitor antibody with max phase 4 overall (approved for psoriasis, PsA, AS), but Crohn's disease max phase is 2. Phase reflects development stage, not efficacy in Crohn's.",
+      "direction": "context",
+      "outcome": "not_applicable",
+      "kind": "observation",
+      "sourceIds": [
+        "chembl:CHEMBL1743068"
+      ],
+      "supportingPassage": "Crohn's disease: max phase 2",
+      "intervention": "secukinumab",
+      "id": "F5",
+      "independentStudies": 1,
+      "recordedAt": "2026-10-24T18:42:48.635Z"
+    },
+    {
+      "claim": "An experimental 2.6 Å crystal structure of secukinumab Fv bound to human IL-17A is available (PDB 9SFX), so target engagement by this antibody is structurally characterized.",
+      "direction": "context",
+      "outcome": "not_applicable",
+      "kind": "interpretation",
+      "sourceIds": [
+        "pdb:9SFX"
+      ],
+      "intervention": "secukinumab",
+      "id": "F6",
+      "independentStudies": 1,
+      "recordedAt": "2026-10-24T18:42:50.663Z"
+    }
+  ],
+  "gaps": [
+    {
+      "id": "G1",
+      "description": "Did not retrieve the full results of the open-label extension NCT01009281 (n=7, terminated), or any later trial of IL-17A inhibition in Crohn's disease. Mechanistic data on IL-17A's gut-barrier role were also not retrieved.",
+      "attempted": "search_trials secukinumab Crohn's; the literature counter-search",
+      "recordedAt": "2026-10-24T18:43:02.134Z"
+    }
+  ],
+  "clusters": [
+    {
+      "id": "C1",
+      "label": "Linked records (NCT00584740 ↔ NCT01009281 ↔ PMID 22595313): one study or report, not independent corroboration",
+      "sourceIds": [
+        "ctgov:NCT01009281",
+        "ctgov:NCT00584740",
+        "pmid:22595313"
+      ],
+      "sharedIdentifiers": [
+        "protocol:novartis pharmaceuticals:CAIN457A2202",
+        "pmid:22595313",
+        "nct:NCT01009281"
+      ]
+    }
+  ],
+  "comparisons": [],
+  "plan": [
+    {
+      "title": "Resolve entities (IL17A, Crohn's, secukinumab)",
+      "status": "in_progress"
+    },
+    {
+      "title": "Target-disease evidence and compound mechanism",
+      "status": "pending"
+    },
+    {
+      "title": "Trials and publications of secukinumab in Crohn's (incl. counterevidence)",
+      "status": "pending"
+    },
+    {
+      "title": "Structure selection",
+      "status": "pending"
+    },
+    {
+      "title": "Record findings and finalize brief",
+      "status": "pending"
+    }
+  ],
+  "entities": {
+    "target": {
+      "symbol": "IL17A",
+      "ensemblId": "ENSG00000112115",
+      "uniprot": "Q16552",
+      "name": "interleukin 17A"
+    },
+    "disease": {
+      "id": "MONDO_0005011",
+      "name": "Crohn disease"
+    },
+    "compound": {
+      "name": "secukinumab",
+      "chemblId": "CHEMBL1743068"
+    }
+  },
+  "structure": {
+    "type": "experimental",
+    "modelId": "9SFX",
+    "title": "Secukinumab Fv in complex with human IL-17A",
+    "fileUrl": "https://files.rcsb.org/download/9SFX.cif",
+    "format": "cif",
+    "targetChains": [
+      "C"
+    ],
+    "partnerChains": [
+      {
+        "label": "Secukinumab Fv heavy-chain",
+        "chains": [
+          "B"
+        ],
+        "role": "intervention"
+      },
+      {
+        "label": "Secukinumab Fv light-chain",
+        "chains": [
+          "A"
+        ],
+        "role": "intervention"
+      },
+      {
+        "label": "Light-chain of anti-IL-17A antibody XAB5 (crystallization aid)",
+        "chains": [
+          "L"
+        ],
+        "role": "other"
+      },
+      {
+        "label": "Heavy-chain of anti-IL-17A antibody XAB5 Fv (crystallization aid)",
+        "chains": [
+          "H"
+        ],
+        "role": "other"
+      }
+    ],
+    "method": "X-ray",
+    "resolution": 2.6,
+    "identity": {
+      "uniprotAccession": "Q16552",
+      "verified": true,
+      "method": "RCSB/SIFTS UniProt mapping of the target entity"
+    },
+    "sourceId": "pdb:9SFX",
+    "reason": "Experimental structure of secukinumab bound to the target (44 PDB entries map to Q16552).",
+    "localFile": "9sfx.cif"
+  },
+  "searches": [
+    {
+      "tool": "search_trials",
+      "intent": "support",
+      "query": "{\"condition\":\"Crohn's disease\",\"intervention\":\"secukinumab\"}",
+      "resultCount": 2,
+      "at": "2026-10-24T18:42:31.170Z"
+    },
+    {
+      "tool": "search_literature",
+      "intent": "counter",
+      "query": "(TITLE:\"IL-17A\" OR ABSTRACT:\"IL-17A\") AND (TITLE:\"inflammatory bowel disease\" OR ABSTRACT:\"inflammatory bowel disease\") AND (TITLE:\"worsening\" OR ABSTRACT:\"worsening\")",
+      "resultCount": 6,
+      "at": "2026-10-24T18:42:34.190Z"
+    }
+  ]
+}

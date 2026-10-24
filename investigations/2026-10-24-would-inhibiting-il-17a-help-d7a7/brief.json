@@ -1,0 +1,90 @@
+{
+  "title": "IL-17A inhibition (secukinumab) in Crohn's disease: evidence against benefit",
+  "question": "Would inhibiting IL-17A help patients with Crohn's disease?",
+  "assessment": "opposed",
+  "summary": {
+    "text": "The only randomized human evidence retrieved, a phase 2 secukinumab trial in moderate-to-severe Crohn's disease, showed no benefit and was stopped for futility. Secukinumab had more adverse events, including infections. Case reports of IBD onset or worsening on IL-17 inhibitors point the same way, but they cannot establish causality.",
+    "findingIds": [
+      "F1",
+      "F2",
+      "F3"
+    ]
+  },
+  "keyFindings": [
+    {
+      "text": "In a randomized phase 2 trial (n=59), secukinumab 10 mg/kg IV ×2 gave a CDAI change of -29.2 vs -63.1 with placebo at week 6. The trial was terminated for futility.",
+      "findingIds": [
+        "F1"
+      ]
+    },
+    {
+      "text": "The publication concluded that IL-17A blockade was ineffective in Crohn's disease and that adverse events were more frequent than with placebo, including infections. This is the same study as the registration, not independent corroboration.",
+      "findingIds": [
+        "F2"
+      ]
+    },
+    {
+      "text": "Secukinumab is well characterized as an IL-17A inhibitor and is approved at phase 4 for other immune diseases. Crohn's disease remains at max phase 2, and a secukinumab–IL-17A co-crystal structure exists (PDB 9SFX).",
+      "findingIds": [
+        "F5",
+        "F6"
+      ]
+    }
+  ],
+  "opposingEvidence": [
+    {
+      "text": "The randomized trial showed no efficacy, with numerically worse CDAI change and response rate on drug, and was stopped for futility.",
+      "findingIds": [
+        "F1"
+      ]
+    },
+    {
+      "text": "The publication reports ineffectiveness plus excess infections (20 on secukinumab, none on placebo).",
+      "findingIds": [
+        "F2"
+      ]
+    },
+    {
+      "text": "Case series describe new or worsening IBD on IL-17 inhibitors given for other diseases. This suggests IL-17A may have a protective role in the gut, but the evidence is anecdotal.",
+      "findingIds": [
+        "F3"
+      ]
+    }
+  ],
+  "contextDifferences": [
+    {
+      "text": "Open Targets gives a low overall association (0.1), with most of the signal from literature. This is a ranking, not a probability of success.",
+      "findingIds": [
+        "F4"
+      ]
+    },
+    {
+      "text": "Secukinumab's approvals are in psoriasis, psoriatic arthritis and ankylosing spondylitis. ChEMBL max phase is not efficacy in Crohn's disease, where the phase is 2.",
+      "findingIds": [
+        "F5"
+      ]
+    },
+    {
+      "text": "The IBD case reports come from patients with psoriasis or spondyloarthritis, not from Crohn's trial populations.",
+      "findingIds": [
+        "F3"
+      ]
+    }
+  ],
+  "limitations": [
+    "Only one randomized Crohn's trial was found, and it was small and short with a single dose regimen.",
+    "The placebo response was large and the primary analysis was Bayesian with historical placebo information.",
+    "The case series evidence comes from conference abstracts without denominators.",
+    "The trial tested one antibody (secukinumab). It does not exclude other ways of targeting the IL-17 pathway, such as IL-17A/F or the receptor, and it says nothing about subgroups."
+  ],
+  "unknowns": [
+    "Whether the lack of benefit reflects the biology (IL-17A protective in the gut barrier), too little drug at the mucosa, or patient selection.",
+    "The results of the open-label extension NCT01009281 (n=7) were not examined.",
+    "Whether any genetic subgroup, such as those explored in the paper, might respond."
+  ],
+  "nextQuestions": [
+    "What mechanistic and animal evidence shows IL-17A protects the intestinal epithelial barrier?",
+    "Have later trials of IL-17 pathway inhibitors (brodalumab, ixekizumab) in IBD reported safety signals?",
+    "How do IL-23/p19 inhibitors, which reduce IL-17 indirectly, succeed in Crohn's disease where direct IL-17A blockade failed?"
+  ]
+}

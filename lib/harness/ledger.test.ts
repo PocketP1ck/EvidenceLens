@@ -28,13 +28,25 @@ describe("passage matching", () => {
 });
 
 describe("EvidenceLedger", () => {
-  it("clusters a trial registration with its results publication", () => {
+  it("clusters the core RCT, its extension (shared protocol ID) and the results publication", () => {
     const l = seeded();
     const clusters = l.clusters();
     const c = clusters.find((x) => x.sourceIds.includes("pmid:22595313"));
-    expect(c?.sourceIds).toEqual(expect.arrayContaining(["ctgov:NCT01009281", "pmid:22595313"]));
+    expect(c?.sourceIds).toEqual(expect.arrayContaining(["ctgov:NCT00584740", "ctgov:NCT01009281", "pmid:22595313"]));
     expect(c?.label).toMatch(/not independent corroboration/);
-    expect(l.independentStudies(["ctgov:NCT01009281", "pmid:22595313"])).toBe(1);
+    expect(c?.sharedIdentifiers).toEqual(expect.arrayContaining(["pmid:22595313", "protocol:novartis pharmaceuticals:CAIN457A2202"]));
+    expect(l.independentStudies(["ctgov:NCT00584740", "pmid:22595313"])).toBe(1);
+  });
+
+  it("keeps unrelated registrations apart", () => {
+    const l = new EvidenceLedger();
+    l.register(normalizeStudy(fixture("ctgov-NCT00584740.json")));
+    const other = normalizeStudy(fixture("ctgov-NCT00584740.json"));
+    other.id = "ctgov:NCT09999999";
+    other.identifiers = { nct: "NCT09999999" };
+    (other.data as { orgStudyId?: string }).orgStudyId = "M15-991";
+    l.register(other);
+    expect(l.clusters()).toEqual([]);
   });
 
   it("rejects findings that cite unknown sources", () => {

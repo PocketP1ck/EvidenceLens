@@ -1,0 +1,742 @@
+{
+  "sources": [
+    {
+      "id": "ot:ENSG00000112115:MONDO_0005011",
+      "kind": "association",
+      "source": "Open Targets",
+      "title": "IL17A – Crohn disease association",
+      "url": "https://platform.opentargets.org/evidence/ENSG00000112115/MONDO_0005011",
+      "retrievedAt": "2026-10-24T18:42:29.590Z",
+      "excerpt": "Overall association score 0.1 (datatypes: literature 0.503, clinical 0.137, rna_expression 0.126). Open Targets association scores rank target–disease evidence; they are not probabilities of therapeutic success.",
+      "text": "Overall association score 0.1 (datatypes: literature 0.503, clinical 0.137, rna_expression 0.126). Open Targets association scores rank target–disease evidence; they are not probabilities of therapeutic success.",
+      "identifiers": {},
+      "linked": [],
+      "data": {
+        "ensemblId": "ENSG00000112115",
+        "symbol": "IL17A",
+        "diseaseId": "MONDO_0005011",
+        "diseaseName": "Crohn disease",
+        "associationScore": 0.1,
+        "datatypeScores": [
+          {
+            "datatype": "literature",
+            "score": 0.503
+          },
+          {
+            "datatype": "clinical",
+            "score": 0.137
+          },
+          {
+            "datatype": "rna_expression",
+            "score": 0.126
+          }
+        ],
+        "uniprotAccession": "Q16552",
+        "scoreNote": "Open Targets association scores rank target–disease evidence; they are not probabilities of therapeutic success."
+      }
+    },
+    {
+      "id": "chembl:CHEMBL1743068",
+      "kind": "compound",
+      "source": "ChEMBL",
+      "title": "SECUKINUMAB (Antibody)",
+      "url": "https://www.ebi.ac.uk/chembl/explore/compound/CHEMBL1743068",
+      "retrievedAt": "2026-10-24T18:42:30.985Z",
+      "excerpt": "Max phase 4, first approval 2015. Mechanism: Interleukin 17A inhibitor (INHIBITOR; target Interleukin-17A Q16552). Indications: ankylosing spondylitis: max phase 4; psoriasis: max phase 4; psoriatic arthritis: max phase 4; immune system disease: max phase 4; spondyloarthropathy: max phase 4; psoriasis vulgaris: max phase 4; rheumatoid arthritis: max phase 3; Behcet's syndrome: max phase 3; uveitis: max phase 3; hidradenitis suppurativa: max phase 3; Tendinopathy: max phase 3; polymyalgia rheumatica: max phase 3; temporal arteritis: max phase 3; lupus nephritis: max phase 3; Graves ophthalmopathy: max phase 3; osteoarthritis: max phase 3; alopecia areata: max phase 2; Crohn's disease: max phase 2; relapsing-remitting multiple sclerosis: max phase 2; Pyoderma: max phase 2; atopic eczema: max phase 2; dry eye syndrome: max phase 2; necrobiosis lipoidica: max phase 2; discoid lupus erythema…",
+      "text": "Max phase 4, first approval 2015. Mechanism: Interleukin 17A inhibitor (INHIBITOR; target Interleukin-17A Q16552). Indications: ankylosing spondylitis: max phase 4; psoriasis: max phase 4; psoriatic arthritis: max phase 4; immune system disease: max phase 4; spondyloarthropathy: max phase 4; psoriasis vulgaris: max phase 4; rheumatoid arthritis: max phase 3; Behcet's syndrome: max phase 3; uveitis: max phase 3; hidradenitis suppurativa: max phase 3; Tendinopathy: max phase 3; polymyalgia rheumatica: max phase 3; temporal arteritis: max phase 3; lupus nephritis: max phase 3; Graves ophthalmopathy: max phase 3; osteoarthritis: max phase 3; alopecia areata: max phase 2; Crohn's disease: max phase 2; relapsing-remitting multiple sclerosis: max phase 2; Pyoderma: max phase 2; atopic eczema: max phase 2; dry eye syndrome: max phase 2; necrobiosis lipoidica: max phase 2; discoid lupus erythema…\nMechanism: Interleukin 17A inhibitor (INHIBITOR; target Interleukin-17A Q16552). Indications: ankylosing spondylitis: max phase 4; psoriasis: max phase 4; psoriatic arthritis: max phase 4; immune system disease: max phase 4; spondyloarthropathy: max phase 4; psoriasis vulgaris: max phase 4; rheumatoid arthritis: max phase 3; Behcet's syndrome: max phase 3; uveitis: max phase 3; hidradenitis suppurativa: max phase 3; Tendinopathy: max phase 3; polymyalgia rheumatica: max phase 3; temporal arteritis: max phase 3; lupus nephritis: max phase 3; Graves ophthalmopathy: max phase 3; osteoarthritis: max phase 3; alopecia areata: max phase 2; Crohn's disease: max phase 2; relapsing-remitting multiple sclerosis: max phase 2; Pyoderma: max phase 2; atopic eczema: max phase 2; dry eye syndrome: max phase 2; necrobiosis lipoidica: max phase 2; discoid lupus erythematosus: max phase 2; lichen planopilaris: max phase 2; asthma: max phase 2; type 1 diabetes mellitus: max phase 2; multiple sclerosis: max phase 2; COVID-19: max phase 2; inflammatory bowel disease: max phase 2; rosacea: max phase 1; pityriasis rubra pilaris: max phase 1.",
+      "identifiers": {},
+      "linked": [],
+      "data": {
+        "chemblId": "CHEMBL1743068",
+        "name": "SECUKINUMAB",
+        "moleculeType": "Antibody",
+        "maxPhase": 4,
+        "firstApproval": 2015,
+        "mechanisms": [
+          {
+            "action": "Interleukin 17A inhibitor",
+            "actionType": "INHIBITOR",
+            "targetChemblId": "CHEMBL3390822",
+            "targetName": "Interleukin-17A",
+            "targetType": "SINGLE PROTEIN",
+            "targetUniprot": [
+              "Q16552"
+            ]
+          }
+        ],
+        "indications": [
+          {
+            "term": "ankylosing spondylitis",
+            "efoId": "EFO:0003898",
+            "maxPhaseForIndication": 4
+          },
+          {
+            "term": "psoriasis",
+            "efoId": "EFO:0000676",
+            "maxPhaseForIndication": 4
+          },
+          {
+            "term": "psoriatic arthritis",
+            "efoId": "EFO:0003778",
+            "maxPhaseForIndication": 4
+          },
+          {
+            "term": "immune system disease",
+            "efoId": "EFO:0000540",
+            "maxPhaseForIndication": 4
+          },
+          {
+            "term": "spondyloarthropathy",
+            "efoId": "EFO:0000706",
+            "maxPhaseForIndication": 4
+          },
+          {
+            "term": "psoriasis vulgaris",
+            "efoId": "EFO:1001494",
+            "maxPhaseForIndication": 4
+          },
+          {
+            "term": "rheumatoid arthritis",
+            "efoId": "EFO:0000685",
+            "maxPhaseForIndication": 3
+          },
+          {
+            "term": "Behcet's syndrome",
+            "efoId": "EFO:0003780",
+            "maxPhaseForIndication": 3
+          },
+          {
+            "term": "uveitis",
+            "efoId": "EFO:1001231",
+            "maxPhaseForIndication": 3
+          },
+          {
+            "term": "hidradenitis suppurativa",
+            "efoId": "EFO:1000710",
+            "maxPhaseForIndication": 3
+          },
+          {
+            "term": "Tendinopathy",
+            "efoId": "EFO:1001434",
+            "maxPhaseForIndication": 3
+          },
+          {
+            "term": "polymyalgia rheumatica",
+            "efoId": "EFO:0008518",
+            "maxPhaseForIndication": 3
+          },
+          {
+            "term": "temporal arteritis",
+            "efoId": "EFO:1001209",
+            "maxPhaseForIndication": 3
+          },
+          {
+            "term": "lupus nephritis",
+            "efoId": "EFO:0005761",
+            "maxPhaseForIndication": 3
+          },
+          {
+            "term": "Graves ophthalmopathy",
+            "efoId": "EFO:1001466",
+            "maxPhaseForIndication": 3
+          },
+          {
+            "term": "osteoarthritis",
+            "efoId": "MONDO:0005178",
+            "maxPhaseForIndication": 3
+          },
+          {
+            "term": "alopecia areata",
+            "efoId": "EFO:0004192",
+            "maxPhaseForIndication": 2
+          },
+          {
+            "term": "Crohn's disease",
+            "efoId": "EFO:0000384",
+            "maxPhaseForIndication": 2
+          },
+          {
+            "term": "relapsing-remitting multiple sclerosis",
+            "efoId": "EFO:0003929",
+            "maxPhaseForIndication": 2
+          },
+          {
+            "term": "Pyoderma",
+            "efoId": "HP:0000999",
+            "maxPhaseForIndication": 2
+          },
+          {
+            "term": "atopic eczema",
+            "efoId": "EFO:0000274",
+            "maxPhaseForIndication": 2
+          },
+          {
+            "term": "dry eye syndrome",
+            "efoId": "EFO:1000906",
+            "maxPhaseForIndication": 2
+          },
+          {
+            "term": "necrobiosis lipoidica",
+            "efoId": "EFO:1000738",
+            "maxPhaseForIndication": 2
+          },
+          {
+            "term": "discoid lupus erythematosus",
+            "efoId": "MONDO:0019558",
+            "maxPhaseForIndication": 2
+          },
+          {
+            "term": "lichen planopilaris",
+            "efoId": "EFO:0009856",
+            "maxPhaseForIndication": 2
+          },
+          {
+            "term": "asthma",
+            "efoId": "MONDO:0004979",
+            "maxPhaseForIndication": 2
+          },
+          {
+            "term": "type 1 diabetes mellitus",
+            "efoId": "MONDO:0005147",
+            "maxPhaseForIndication": 2
+          },
+          {
+            "term": "multiple sclerosis",
+            "efoId": "MONDO:0005301",
+            "maxPhaseForIndication": 2
+          },
+          {
+            "term": "COVID-19",
+            "efoId": "MONDO:0100096",
+            "maxPhaseForIndication": 2
+          },
+          {
+            "term": "inflammatory bowel disease",
+            "efoId": "EFO:0003767",
+            "maxPhaseForIndication": 2
+          },
+          {
+            "term": "rosacea",
+            "efoId": "EFO:1000760",
+            "maxPhaseForIndication": 1
+          },
+          {
+            "term": "pityriasis rubra pilaris",
+            "efoId": "MONDO:0100017",
+            "maxPhaseForIndication": 1
+          }
+        ],
+        "activities": []
+      }
+    },
+    {
+      "id": "ctgov:NCT01009281",
+      "kind": "trial",
+      "source": "ClinicalTrials.gov",
+      "title": "An Open Label Safety and Tolerability Study of AIN457 in Patients With Moderate to Severe Crohn's Disease",
+      "url": "https://clinicaltrials.gov/study/NCT01009281",
+      "retrievedAt": "2026-10-24T18:42:31.168Z",
+      "year": 2009,
+      "excerpt": "PHASE2 NA INTERVENTIONAL study, status TERMINATED; enrollment 7; results posted: yes. This study will assess the safety and tolerability of AIN457 in patients with moderate to severe Crohn's disease who already participated and completed the core trial CAIN457A2202.",
+      "text": "PHASE2 NA INTERVENTIONAL study, status TERMINATED; enrollment 7; results posted: yes. This study will assess the safety and tolerability of AIN457 in patients with moderate to severe Crohn's disease who already participated and completed the core trial CAIN457A2202.\nAn Open Label Safety and Tolerability Study of AIN457 in Patients With Moderate to Severe Crohn's Disease A 52 Week Open Label Extension Study to Evaluate the Safety and Tolerability of AIN457 (Anti IL-17 Monoclonal Antibody) in Patients With Moderate to Severe Crohn's Disease This study will assess the safety and tolerability of AIN457 in patients with moderate to severe Crohn's disease who already participated and completed the core trial CAIN457A2202. Primary outcome: Number of Participants With Adverse Events [From Start of the Study up to Study Termination (up to 42 Weeks)] PRIMARY result: Number of Participants With Adverse Events. Secukinumab: 3 (n=7) SECONDARY result: Number of Participants With Anti-AIN457 Antibodies. Secukinumab: NA (n=7) SECONDARY result: Change From Baseline in Concentration of Interleukin 17 (IL-17). Secukinumab: NA (n=7) SECONDARY result: Change From Baseline in Levels of Fecal Calprotectin and Lactoferrin. Secukinumab: NA (n=7) Adverse events Secukinumab: serious 0/7, other 3/7 Inclusion Criteria: * Patients who participate and complete the core CAIN457A2202 study up to and including Visit 11 (end of study), may enter the extension study upon signing informed consent. Exclusion Criteria: * Patients for whom continued treatment with AIN457 is not considered appropriate by the treating physician. * Patients who were non-compliant or who demonstrated a major protocol violation in the core CAIN457A2202 study * Patients who discontinued from the core CAIN457A2202 study before Visit 8 (day 43). Other protocol-defined inclusion/exclusion criteria may apply",
+      "identifiers": {
+        "nct": "NCT01009281"
+      },
+      "linked": [
+        {
+          "pmid": "22595313"
+        }
+      ],
+      "data": {
+        "nctId": "NCT01009281",
+        "orgStudyId": "CAIN457A2202E1",
+        "status": "TERMINATED",
+        "phases": [
+          "PHASE2"
+        ],
+        "studyType": "INTERVENTIONAL",
+        "allocation": "NA",
+        "masking": "NONE",
+        "enrollment": 7,
+        "enrollmentType": "ACTUAL",
+        "startDate": "2009-10-30",
+        "completionDate": "2010-08-19",
+        "conditions": [
+          "Crohn's Disease",
+          "Inflammatory Bowel Disease"
+        ],
+        "interventions": [
+          "DRUG AIN457"
+        ],
+        "arms": [
+          "AIN457 [EXPERIMENTAL]"
+        ],
+        "sponsor": "Novartis Pharmaceuticals",
+        "primaryOutcomes": [
+          "Number of Participants With Adverse Events [From Start of the Study up to Study Termination (up to 42 Weeks)]"
+        ],
+        "hasResults": true,
+        "results": [
+          {
+            "type": "PRIMARY",
+            "title": "Number of Participants With Adverse Events",
+            "timeFrame": "From Start of the Study up to Study Termination (up to 42 Weeks)",
+            "unit": "Participants",
+            "summary": "Secukinumab: 3 (n=7)",
+            "pValues": []
+          },
+          {
+            "type": "SECONDARY",
+            "title": "Number of Participants With Anti-AIN457 Antibodies",
+            "timeFrame": "From Start of the Study up to Study Termination (up to 42 Weeks)",
+            "unit": "Participants",
+            "summary": "Secukinumab: NA (n=7)",
+            "pValues": []
+          },
+          {
+            "type": "SECONDARY",
+            "title": "Change From Baseline in Concentration of Interleukin 17 (IL-17)",
+            "timeFrame": "Baseline up to Study Termination (up to 42 Weeks)",
+            "unit": "Participants",
+            "summary": "Secukinumab: NA (n=7)",
+            "pValues": []
+          },
+          {
+            "type": "SECONDARY",
+            "title": "Change From Baseline in Levels of Fecal Calprotectin and Lactoferrin",
+            "timeFrame": "Baseline up to Study Termination (up to 42 Weeks)",
+            "unit": "Participants",
+            "summary": "Secukinumab: NA (n=7)",
+            "pValues": []
+          }
+        ],
+        "adverseEvents": [
+          {
+            "group": "Secukinumab",
+            "serious": "0/7",
+            "other": "3/7"
+          }
+        ],
+        "references": [
+          {
+            "pmid": "22595313",
+            "type": "DERIVED",
+            "citation": "Hueber W, Sands BE, Lewitzky S, Vandemeulebroecke M, Reinisch W, Higgins PD, Wehkamp J, Feagan BG, Yao MD, Karczewski M, Karczewski J, Pezous N, Bek S, Bruin G, Mellgard B, Berger C, Londei M, Bertolino AP, Tougas G, Travis SP; Secukinumab in Crohn's Disease Study Group. Secukinumab, a human anti-I…"
+          }
+        ],
+        "eligibility": "Inclusion Criteria: * Patients who participate and complete the core CAIN457A2202 study up to and including Visit 11 (end of study), may enter the extension study upon signing informed consent. Exclusion Criteria: * Patients for whom continued treatment with AIN457 is not considered appropriate by the treating physician. * Patients who were non-compliant or who demonstrated a major protocol violation in the core CAIN457A2202 study * Patients who discontinued from the core CAIN457A2202 study before Visit 8 (day 43). Other protocol-defined inclusion/exclusion criteria may apply"
+      }
+    },
+    {
+      "id": "ctgov:NCT00584740",
+      "kind": "trial",
+      "source": "ClinicalTrials.gov",
+      "title": "Efficacy, Safety and Tolerability of AIN457 in Moderate to Severe Active Crohn's Disease",
+      "url": "https://clinicaltrials.gov/study/NCT00584740",
+      "retrievedAt": "2026-10-24T18:42:33.834Z",
+      "year": 2008,
+      "excerpt": "PHASE2 RANDOMIZED INTERVENTIONAL study, status TERMINATED (why stopped: The study was terminated prematurely after futility criterion was met at planned interim analysis of 41 patients.); enrollment 59; results posted: yes. This study will assess the safety and efficacy of AIN457 in patients with moderate to severe active Crohn's disease.",
+      "text": "PHASE2 RANDOMIZED INTERVENTIONAL study, status TERMINATED (why stopped: The study was terminated prematurely after futility criterion was met at planned interim analysis of 41 patients.); enrollment 59; results posted: yes. This study will assess the safety and efficacy of AIN457 in patients with moderate to severe active Crohn's disease.\nEfficacy, Safety and Tolerability of AIN457 in Moderate to Severe Active Crohn's Disease A Multicenter, Randomized, Double-blind, Placebo-controlled, Parallel-group Proof-of-concept Study to Assess the Efficacy, Safety and Tolerability of Two Single iv Infusions of AIN457 10 mg/kg (Anti IL-17 Monoclonal Antibody) in Patients With Moderate to Severe Active Crohn's Disease This study will assess the safety and efficacy of AIN457 in patients with moderate to severe active Crohn's disease. Why stopped: The study was terminated prematurely after futility criterion was met at planned interim analysis of 41 patients. Primary outcome: Mean Change From Baseline in Crohns Disease Activity Index (CDAI) Score [6 weeks] PRIMARY result: Mean Change From Baseline in Crohns Disease Activity Index (CDAI) Score. AIN457: -29.2 ± 14.0 (n=39); Placebo: -63.1 ± 13.9 (n=20) SECONDARY result: Percentage of Participants Achieving Remission and/or Response. AIN457: 26 (n=39); Placebo: 65 (n=20) SECONDARY result: Percentage of Participants Achieving Remission. AIN457: 10 (n=39); Placebo: 15 (n=20) SECONDARY result: Percentage of Participants Achieving Response. AIN457: 26 (n=39); Placebo: 65 (n=10) Adverse events AIN457 Twice 10mg/kg: serious 7/39, other 22/39 Adverse events Placebo: serious 3/20, other 9/20 Inclusion Criteria: * Male or female; 18-75 years old * Diagnosis of Crohn's disease for at least 3 months prior to screening * Confirmation of Crohn's disease by endoscopic or imaging examination * Moderately active Crohn's disease at baseline, defined as: * CDAI ≥220 and ≤450 * Active disease despite prior treatment with corticosteroids for at least 2 weeks, or immunosuppressants for at least 3 months. Treatment with azathioprine, 6-MP or MTX is allowed but must have been on a stable dose for at least 10 weeks, corticosteroids are allowed but must have been on a stable doses of prednisolone not exceeding 40 mg for two weeks prior to baseline. Immunosuppressants other than those listed above, such as cyclosporine, tacrolimus and mycophenolate, are not allowed and must be stopped (wash-out periods defined in the protocol); Exclusion Criteria: * Body Mass Index \\>34 * Positive PPD tuberculin skin test or QuantiFeron test * Any subject with evidence of active pulmonary disease or evidence of latent tuberculosis or fungal infection at screening or within past 3 months * Symptoms associated with active bowel structuring disease and pre-stenotic dilation on radiographs * Fistulizing disease if complicated by sepsis and/or untreated abscess * Multiple bowel surgeries and clinically important short bowel syndrome defined as an inability to maintain caloric intake * Use of certain medications as specified in the protocol * Clinical improvement due to other Crohn's therapy Other protocol-defined inclusion/exclusion criteria may apply\n[ctgov:NCT00584740] Efficacy, Safety and Tolerability of AIN457 in Moderate to Severe Active Crohn's Disease\nOrg study ID: CAIN457A2202; sponsor Novartis Pharmaceuticals; PHASE2; INTERVENTIONAL; allocation RANDOMIZED; masking DOUBLE; enrollment 59 (ACTUAL); 2008-08 → 2010-08\nStatus: TERMINATED; why stopped: The study was terminated prematurely after futility criterion was met at planned interim analysis of 41 patients.; results posted: yes\nConditions: Crohn's Disease\nArms: AIN457 [EXPERIMENTAL]: AIN457 10 mg/kg was given as an intravenous infusion at day 1 and day 22. | Placebo [PLACEBO_COMPARATOR]: Matching placebo to AIN457 was given as an infusion at day 1 and day 22.\nPrimary outcomes (registered): Mean Change From Baseline in Crohns Disease Activity Index (CDAI) Score [6 weeks]\nPRIMARY RESULT — Mean Change From Baseline in Crohns Disease Activity Index (CDAI) Score [6 weeks] (score on a scale): AIN457: -29.2 ± 14.0 (n=39); Placebo: -63.1 ± 13.9 (n=20)\nSECONDARY RESULT — Percentage of Participants Achieving Remission and/or Response [6 weeks] (Percentage of participants): AIN457: 26 (n=39); Placebo: 65 (n=20)\nSECONDARY RESULT — Percentage of Participants Achieving Remission [6 weeks] (Percentage of participants): AIN457: 10 (n=39); Placebo: 15 (n=20)\nSECONDARY RESULT — Percentage of Participants Achieving Response [6 weeks] (Percentage of participants): AIN457: 26 (n=39); Placebo: 65 (n=10)\nAdverse events (affected/at risk): AIN457 Twice 10mg/kg: serious 7/39, other 22/39; Placebo: serious 3/20, other 9/20\nReferences: none listed\nEligibility (excerpt): Inclusion Criteria: * Male or female; 18-75 years old * Diagnosis of Crohn's disease for at least 3 months prior to screening * Confirmation of Crohn's disease by endoscopic or imaging examination * Moderately active Crohn's disease at baseline, defined as: * CDAI ≥220 and ≤450 * Active disease despite prior treatment with corticosteroids for at least 2 weeks, or immunosuppressants for at least 3 months. Treatment with azathioprine, 6-MP or MTX is allowed but must have been on a stable dose for at least 10 weeks, corticosteroids are allowed but must have been on a stable doses of prednisolone…",
+      "identifiers": {
+        "nct": "NCT00584740"
+      },
+      "linked": [],
+      "data": {
+        "nctId": "NCT00584740",
+        "orgStudyId": "CAIN457A2202",
+        "status": "TERMINATED",
+        "whyStopped": "The study was terminated prematurely after futility criterion was met at planned interim analysis of 41 patients.",
+        "phases": [
+          "PHASE2"
+        ],
+        "studyType": "INTERVENTIONAL",
+        "allocation": "RANDOMIZED",
+        "masking": "DOUBLE",
+        "enrollment": 59,
+        "enrollmentType": "ACTUAL",
+        "startDate": "2008-08",
+        "completionDate": "2010-08",
+        "conditions": [
+          "Crohn's Disease"
+        ],
+        "interventions": [
+          "DRUG AIN457 (10 mg/kg)",
+          "DRUG Placebo (Matching placebo to AIN457)"
+        ],
+        "arms": [
+          "AIN457 [EXPERIMENTAL]: AIN457 10 mg/kg was given as an intravenous infusion at day 1 and day 22.",
+          "Placebo [PLACEBO_COMPARATOR]: Matching placebo to AIN457 was given as an infusion at day 1 and day 22."
+        ],
+        "sponsor": "Novartis Pharmaceuticals",
+        "primaryOutcomes": [
+          "Mean Change From Baseline in Crohns Disease Activity Index (CDAI) Score [6 weeks]"
+        ],
+        "hasResults": true,
+        "results": [
+          {
+            "type": "PRIMARY",
+            "title": "Mean Change From Baseline in Crohns Disease Activity Index (CDAI) Score",
+            "timeFrame": "6 weeks",
+            "unit": "score on a scale",
+            "summary": "AIN457: -29.2 ± 14.0 (n=39); Placebo: -63.1 ± 13.9 (n=20)",
+            "pValues": []
+          },
+          {
+            "type": "SECONDARY",
+            "title": "Percentage of Participants Achieving Remission and/or Response",
+            "timeFrame": "6 weeks",
+            "unit": "Percentage of participants",
+            "summary": "AIN457: 26 (n=39); Placebo: 65 (n=20)",
+            "pValues": []
+          },
+          {
+            "type": "SECONDARY",
+            "title": "Percentage of Participants Achieving Remission",
+            "timeFrame": "6 weeks",
+            "unit": "Percentage of participants",
+            "summary": "AIN457: 10 (n=39); Placebo: 15 (n=20)",
+            "pValues": []
+          },
+          {
+            "type": "SECONDARY",
+            "title": "Percentage of Participants Achieving Response",
+            "timeFrame": "6 weeks",
+            "unit": "Percentage of participants",
+            "summary": "AIN457: 26 (n=39); Placebo: 65 (n=10)",
+            "pValues": []
+          }
+        ],
+        "adverseEvents": [
+          {
+            "group": "AIN457 Twice 10mg/kg",
+            "serious": "7/39",
+            "other": "22/39"
+          },
+          {
+            "group": "Placebo",
+            "serious": "3/20",
+            "other": "9/20"
+          }
+        ],
+        "references": [],
+        "eligibility": "Inclusion Criteria: * Male or female; 18-75 years old * Diagnosis of Crohn's disease for at least 3 months prior to screening * Confirmation of Crohn's disease by endoscopic or imaging examination * Moderately active Crohn's disease at baseline, defined as: * CDAI ≥220 and ≤450 * Active disease despite prior treatment with corticosteroids for at least 2 weeks, or immunosuppressants for at least 3 months. Treatment with azathioprine, 6-MP or MTX is allowed but must have been on a stable dose for at least 10 weeks, corticosteroids are allowed but must have been on a stable doses of prednisolone…"
+      }
+    },
+    {
+      "id": "uniprot:Q16552",
+      "kind": "protein",
+      "source": "UniProt",
+      "title": "Interleukin-17A (IL17A, Homo sapiens)",
+      "url": "https://www.uniprot.org/uniprotkb/Q16552/entry",
+      "retrievedAt": "2026-10-24T18:42:31.523Z",
+      "excerpt": "Reviewed (Swiss-Prot) entry, 155 aa. Function: Effector cytokine of innate and adaptive immune system involved in antimicrobial host defense and maintenance of tissue integrity (PubMed:24120361). Signals via IL17RA-IL17RC heterodimeric receptor complex, triggering homotypic interaction of IL17RA and IL17RC chains with TRAF3IP2 adapter. This leads to downstream TRAF6-mediated activation of NF-kappa-B and MAPkinase pathways ultimately resulting in transcriptional activation of cytokines, chemokines, antimicrobial peptides and matrix metalloproteinases, with potential strong immune inflammation (PubMed:17911633, PubMed:18684971, PubMed:19825828, PubMed:21350122, PubMed:24120361, PubMed:8676080…",
+      "text": "Reviewed (Swiss-Prot) entry, 155 aa. Function: Effector cytokine of innate and adaptive immune system involved in antimicrobial host defense and maintenance of tissue integrity (PubMed:24120361). Signals via IL17RA-IL17RC heterodimeric receptor complex, triggering homotypic interaction of IL17RA and IL17RC chains with TRAF3IP2 adapter. This leads to downstream TRAF6-mediated activation of NF-kappa-B and MAPkinase pathways ultimately resulting in transcriptional activation of cytokines, chemokines, antimicrobial peptides and matrix metalloproteinases, with potential strong immune inflammation (PubMed:17911633, PubMed:18684971, PubMed:19825828, PubMed:21350122, PubMed:24120361, PubMed:8676080…\nEffector cytokine of innate and adaptive immune system involved in antimicrobial host defense and maintenance of tissue integrity (PubMed:24120361). Signals via IL17RA-IL17RC heterodimeric receptor complex, triggering homotypic interaction of IL17RA and IL17RC chains with TRAF3IP2 adapter. This leads to downstream TRAF6-mediated activation of NF-kappa-B and MAPkinase pathways ultimately resulting in transcriptional activation of cytokines, chemokines, antimicrobial peptides and matrix metalloproteinases, with potential strong immune inflammation (PubMed:17911633, PubMed:18684971, PubMed:19825828, PubMed:21350122, PubMed:24120361, PubMed:8676080). Plays an important role in connecting T cell-mediated adaptive immunity and acute inflammatory response to destroy extracellular bacteria and fungi. As a signature effector cytokine of T-helper 17 cells (Th17), primarily induces neutrophil activation and recruitment at infection and inflammatory sites (By similarity). In airway epithelium, mediates neutrophil chemotaxis via induction of CXCL1 and CXCL5 chemokines (By similarity). In secondary lymphoid organs, contributes to germinal center formation by regulating the chemotactic response of B cells to CXCL12 and CXCL13, enhancing retention of B cells within the germinal centers, B cell somatic hypermutation rate and selection toward plasma cells (By similarity). Effector cytokine of a subset of gamma-delta T cells that functions as part of an inflammatory circuit downstream IL1B, TLR2 and IL23A-IL12B to promote neutrophil recruitment for efficient bacterial clearance (By similarity). Effector cytokine of innate immune cells including invariant natural killer cell (iNKT) and group 3 innate lymphoid cells that mediate initial neutrophilic inflammation (By similarity). Involved in the maintenance of the integrity of epithelial barriers during homeostasis and pathogen infection (PubMed:21350122). Upon acute injury, has a direct role in epithelial barrier formation by regulating OCLN localization and tight junction biogenesis (By similarity). As part of the mucosal immune response induced by commensal bacteria, enhances host's ability to resist pathogenic bacterial and fungal infections by promoting neutrophil recruitment and antimicrobial peptides release (By similarity). In synergy with IL17F, mediates the production of antimicrobial beta-defensins DEFB1, DEFB103A, and DEFB104A by mucosal epithelial cells, limiting the entry of microbes through the epithelial barriers (By similarity). Involved in antiviral host defense through various mechanisms (By similarity). Enhances immunity against West Nile virus by promoting T cell cytotoxicity (By similarity). May play a beneficial role in influenza A virus (H5N1) infection by enhancing B cell recruitment and immune response in the lung (By similarity). Contributes to influenza A virus (H1N1) clearance by driving the differentiation of B-1a B cells, providing for production of virus-specific IgM antibodies at first line of host defense (By similarity)",
+      "identifiers": {},
+      "linked": [],
+      "data": {
+        "accession": "Q16552",
+        "gene": "IL17A",
+        "name": "Interleukin-17A",
+        "organism": "Homo sapiens",
+        "taxonId": 9606,
+        "reviewed": true,
+        "length": 155,
+        "sequence": "MTPGKTSLVSLLLLLSLEAIVKAGITIPRNPGCPNSEDKNFPRTVMVNLNIHNRNTNTNPKRSSDYYNRSTSPWNLHRNEDPERYPSVIWEAKCRHLGCINADGNVDYHMNSVPIQQEILVLRREPPHCPNSFRLEKILVSVGCTCVTPIVHHVA",
+        "functionText": "Effector cytokine of innate and adaptive immune system involved in antimicrobial host defense and maintenance of tissue integrity (PubMed:24120361). Signals via IL17RA-IL17RC heterodimeric receptor complex, triggering homotypic interaction of IL17RA and IL17RC chains with TRAF3IP2 adapter. This leads to downstream TRAF6-mediated activation of NF-kappa-B and MAPkinase pathways ultimately resulting in transcriptional activation of cytokines, chemokines, antimicrobial peptides and matrix metalloproteinases, with potential strong immune inflammation (PubMed:17911633, PubMed:18684971, PubMed:19825828, PubMed:21350122, PubMed:24120361, PubMed:8676080). Plays an important role in connecting T cell-mediated adaptive immunity and acute inflammatory response to destroy extracellular bacteria and fungi. As a signature effector cytokine of T-helper 17 cells (Th17), primarily induces neutrophil activation and recruitment at infection and inflammatory sites (By similarity). In airway epithelium, mediates neutrophil chemotaxis via induction of CXCL1 and CXCL5 chemokines (By similarity). In secondary lymphoid organs, contributes to germinal center formation by regulating the chemotactic response of B cells to CXCL12 and CXCL13, enhancing retention of B cells within the germinal centers, B cell somatic hypermutation rate and selection toward plasma cells (By similarity). Effector cytokine of a subset of gamma-delta T cells that functions as part of an inflammatory circuit downstream IL1B, TLR2 and IL23A-IL12B to promote neutrophil recruitment for efficient bacterial clearance (By similarity). Effector cytokine of innate immune cells including invariant natural killer cell (iNKT) and group 3 innate lymphoid cells that mediate initial neutrophilic inflammation (By similarity). Involved in the maintenance of the integrity of epithelial barriers during homeostasis and pathogen infection (PubMed:21350122). Upon acute injury, has a direct role in epithelial barrier formation by regulating OCLN localization and tight junction biogenesis (By similarity). As part of the mucosal immune response induced by commensal bacteria, enhances host's ability to resist pathogenic bacterial and fungal infections by promoting neutrophil recruitment and antimicrobial peptides release (By similarity). In synergy with IL17F, mediates the production of antimicrobial beta-defensins DEFB1, DEFB103A, and DEFB104A by mucosal epithelial cells, limiting the entry of microbes through the epithelial barriers (By similarity). Involved in antiviral host defense through various mechanisms (By similarity). Enhances immunity against West Nile virus by promoting T cell cytotoxicity (By similarity). May play a beneficial role in influenza A virus (H5N1) infection by enhancing B cell recruitment and immune response in the lung (By similarity). Contributes to influenza A virus (H1N1) clearance by driving the differentiation of B-1a B cells, providing for production of virus-specific IgM antibodies at first line of host defense (By similarity)",
+        "functionEvidence": {
+          "experimental": 6,
+          "other": 1
+        },
+        "features": [
+          {
+            "type": "Signal",
+            "count": 1,
+            "withExperimentalEvidence": 1
+          },
+          {
+            "type": "Chain",
+            "count": 1,
+            "withExperimentalEvidence": 0
+          },
+          {
+            "type": "Glycosylation",
+            "count": 1,
+            "withExperimentalEvidence": 0
+          },
+          {
+            "type": "Disulfide bond",
+            "count": 2,
+            "withExperimentalEvidence": 2
+          },
+          {
+            "type": "Mutagenesis",
+            "count": 5,
+            "withExperimentalEvidence": 5
+          },
+          {
+            "type": "Helix",
+            "count": 5,
+            "withExperimentalEvidence": 0
+          },
+          {
+            "type": "Beta strand",
+            "count": 12,
+            "withExperimentalEvidence": 0
+          }
+        ],
+        "annotationNote": "A reviewed UniProt entry does not make every annotation experimentally demonstrated; evidence is per feature."
+      }
+    },
+    {
+      "id": "pdb:9SFX",
+      "kind": "structure",
+      "source": "RCSB PDB",
+      "title": "Secukinumab Fv in complex with human IL-17A",
+      "url": "https://www.rcsb.org/structure/9SFX",
+      "retrievedAt": "2026-10-24T18:42:31.524Z",
+      "year": 2025,
+      "excerpt": "X-ray, 2.6 Å. Entities: Light-chain of anti-IL-17A antibody XAB5 (crystallization aid) [chains L]; Heavy-chain of anti-IL-17A antibody XAB5 Fv (crystallization aid) [chains H]; Interleukin-17A [chains C; UniProt Q16552]; Secukinumab Fv heavy-chain [chains B]; Secukinumab Fv light-chain [chains A]",
+      "text": "X-ray, 2.6 Å. Entities: Light-chain of anti-IL-17A antibody XAB5 (crystallization aid) [chains L]; Heavy-chain of anti-IL-17A antibody XAB5 Fv (crystallization aid) [chains H]; Interleukin-17A [chains C; UniProt Q16552]; Secukinumab Fv heavy-chain [chains B]; Secukinumab Fv light-chain [chains A]\nSecukinumab Fv in complex with human IL-17A. Light-chain of anti-IL-17A antibody XAB5 (crystallization aid) [chains L]; Heavy-chain of anti-IL-17A antibody XAB5 Fv (crystallization aid) [chains H]; Interleukin-17A [chains C; UniProt Q16552]; Secukinumab Fv heavy-chain [chains B]; Secukinumab Fv light-chain [chains A]",
+      "identifiers": {},
+      "linked": [],
+      "data": {
+        "pdbId": "9SFX",
+        "title": "Secukinumab Fv in complex with human IL-17A",
+        "method": "X-ray",
+        "resolution": 2.6,
+        "releaseDate": "2025-10-29",
+        "entities": [
+          {
+            "description": "Light-chain of anti-IL-17A antibody XAB5 (crystallization aid)",
+            "uniprotIds": [],
+            "chains": [
+              "L"
+            ]
+          },
+          {
+            "description": "Heavy-chain of anti-IL-17A antibody XAB5 Fv (crystallization aid)",
+            "uniprotIds": [],
+            "chains": [
+              "H"
+            ]
+          },
+          {
+            "description": "Interleukin-17A",
+            "uniprotIds": [
+              "Q16552"
+            ],
+            "chains": [
+              "C"
+            ]
+          },
+          {
+            "description": "Secukinumab Fv heavy-chain",
+            "uniprotIds": [],
+            "chains": [
+              "B"
+            ]
+          },
+          {
+            "description": "Secukinumab Fv light-chain",
+            "uniprotIds": [],
+            "chains": [
+              "A"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "pmid:22595313",
+      "kind": "publication",
+      "source": "Europe PMC",
+      "title": "Secukinumab, a human anti-IL-17A monoclonal antibody, for moderate to severe Crohn's disease: unexpected results of a randomised, double-blind placebo-controlled trial.",
+      "url": "https://europepmc.org/article/MED/22595313",
+      "retrievedAt": "2026-10-24T18:42:33.984Z",
+      "year": 2012,
+      "excerpt": "Objective The authors tested whether the anti-interleukin (IL)-17A monoclonal antibody secukinumab was safe and effective for the treatment of active Crohn's disease. Design In a double-blind, randomised, placebo-controlled proof-of-concept study, 59 patients with moderate to severe Crohn's disease (Crohn's Disease Activity Index (CDAI) ≥220 to ≤450) were assigned in a 2:1 ratio to 2×10 mg/kg intravenous secukinumab or placebo. The primary end point, addressed by bayesian statistics augmented with historical placebo information, was the probability that secukinumab reduces the CDAI by ≥50 points more than placebo at week 6. Ancillary analyses explored associations of 35 candidate genetic polymorphisms and faecal calprotectin response. Results 59 patients (39 secukinumab, 20 placebo, mean baseline CDAI 307 and 301, respectively) were recruited. 18/59 (31%) patients discontinued premature…",
+      "text": "Objective The authors tested whether the anti-interleukin (IL)-17A monoclonal antibody secukinumab was safe and effective for the treatment of active Crohn's disease. Design In a double-blind, randomised, placebo-controlled proof-of-concept study, 59 patients with moderate to severe Crohn's disease (Crohn's Disease Activity Index (CDAI) ≥220 to ≤450) were assigned in a 2:1 ratio to 2×10 mg/kg intravenous secukinumab or placebo. The primary end point, addressed by bayesian statistics augmented with historical placebo information, was the probability that secukinumab reduces the CDAI by ≥50 points more than placebo at week 6. Ancillary analyses explored associations of 35 candidate genetic polymorphisms and faecal calprotectin response. Results 59 patients (39 secukinumab, 20 placebo, mean baseline CDAI 307 and 301, respectively) were recruited. 18/59 (31%) patients discontinued premature…\nSecukinumab, a human anti-IL-17A monoclonal antibody, for moderate to severe Crohn's disease: unexpected results of a randomised, double-blind placebo-controlled trial.\nObjective The authors tested whether the anti-interleukin (IL)-17A monoclonal antibody secukinumab was safe and effective for the treatment of active Crohn's disease. Design In a double-blind, randomised, placebo-controlled proof-of-concept study, 59 patients with moderate to severe Crohn's disease (Crohn's Disease Activity Index (CDAI) ≥220 to ≤450) were assigned in a 2:1 ratio to 2×10 mg/kg intravenous secukinumab or placebo. The primary end point, addressed by bayesian statistics augmented with historical placebo information, was the probability that secukinumab reduces the CDAI by ≥50 points more than placebo at week 6. Ancillary analyses explored associations of 35 candidate genetic polymorphisms and faecal calprotectin response. Results 59 patients (39 secukinumab, 20 placebo, mean baseline CDAI 307 and 301, respectively) were recruited. 18/59 (31%) patients discontinued prematurely (12/39 (31%) secukinumab, 6/20 (30%) placebo), 10/59 (17%) due to insufficient therapeutic effect (8/39 (21%) secukinumab, 2/20 (10%) placebo). Fourteen serious adverse events occurred in 10 patients (seven secukinumab, three placebo); 20 infections, including four local fungal infections, were seen on secukinumab versus none on placebo. Primary end point analysis estimated Conclusions Blockade of IL-17A was ineffective and higher rates of adverse events were noted compared with placebo. Clinical trial registration This trial was registered at ClinicalTrial.gov with the number NCT01009281.",
+      "identifiers": {
+        "pmid": "22595313",
+        "pmcid": "PMC4902107",
+        "doi": "10.1136/gutjnl-2011-301668"
+      },
+      "linked": [
+        {
+          "nct": "NCT01009281"
+        }
+      ],
+      "data": {
+        "journal": "Gut",
+        "authors": "Hueber W, Sands BE, Lewitzky S, Vandemeulebroecke M, Reinisch W, Higgins PD, Wehkamp J, Feagan BG, Yao MD, Karczewski M, Karczewski J, Pezous N, Bek S, Bruin G…",
+        "pubTypes": [
+          "Clinical Trial, Phase II",
+          "Research Support, Non-U.S. Gov't",
+          "research-article",
+          "Multicenter Study",
+          "Randomized Controlled Trial",
+          "Journal Article"
+        ],
+        "citedByCount": 1261,
+        "openAccess": false,
+        "hasAbstract": true
+      }
+    },
+    {
+      "id": "pmid:28165883",
+      "kind": "publication",
+      "source": "Europe PMC",
+      "title": "The role of IL 23 in the treatment of psoriasis.",
+      "url": "https://europepmc.org/article/MED/28165883",
+      "retrievedAt": "2026-10-24T18:42:34.189Z",
+      "year": 2017,
+      "excerpt": "Introduction The IL-23/IL-17 axis is currently considered to be crucial in the pathogenesis of psoriasis. Human IL-23 is primarily produced by antigen-presenting cells and induces and maintains differentiation of Th17 cells and Th22 cells, a primary cellular source of proinflammatory cytokines such as IL-17 and IL-22, which mediate the epidermal hyperplasia, keratinocyte immune activation and tissue inflammation inherent in psoriasis. Agents that target the p40 subunit common to both IL-12 and IL-23 have shown robust clinical activity, but selectivity for IL-23p19 could offer advantages in efficacy and safety with respect to anti-p40 blockade. Areas covered: Relevant references regarding the role of the IL-23/IL-17 pathway in the pathogenesis of psoriasis/psoriatic arthritis and clinical trials with IL-23p40 and IL-23p19 blocking agents were obtained through a literature search in MEDLI…",
+      "text": "Introduction The IL-23/IL-17 axis is currently considered to be crucial in the pathogenesis of psoriasis. Human IL-23 is primarily produced by antigen-presenting cells and induces and maintains differentiation of Th17 cells and Th22 cells, a primary cellular source of proinflammatory cytokines such as IL-17 and IL-22, which mediate the epidermal hyperplasia, keratinocyte immune activation and tissue inflammation inherent in psoriasis. Agents that target the p40 subunit common to both IL-12 and IL-23 have shown robust clinical activity, but selectivity for IL-23p19 could offer advantages in efficacy and safety with respect to anti-p40 blockade. Areas covered: Relevant references regarding the role of the IL-23/IL-17 pathway in the pathogenesis of psoriasis/psoriatic arthritis and clinical trials with IL-23p40 and IL-23p19 blocking agents were obtained through a literature search in MEDLI…\nThe role of IL 23 in the treatment of psoriasis.\nIntroduction The IL-23/IL-17 axis is currently considered to be crucial in the pathogenesis of psoriasis. Human IL-23 is primarily produced by antigen-presenting cells and induces and maintains differentiation of Th17 cells and Th22 cells, a primary cellular source of proinflammatory cytokines such as IL-17 and IL-22, which mediate the epidermal hyperplasia, keratinocyte immune activation and tissue inflammation inherent in psoriasis. Agents that target the p40 subunit common to both IL-12 and IL-23 have shown robust clinical activity, but selectivity for IL-23p19 could offer advantages in efficacy and safety with respect to anti-p40 blockade. Areas covered: Relevant references regarding the role of the IL-23/IL-17 pathway in the pathogenesis of psoriasis/psoriatic arthritis and clinical trials with IL-23p40 and IL-23p19 blocking agents were obtained through a literature search in MEDLINE/Pubmed for articles published until November 2016. Moreover, ongoing registered clinical trials (RCTs) of moderate-to-severe psoriasis and psoriatic arthritis were searched through clinicaltrials.gov website, and a manual search was made for pertinent communications at the 2016 American Academy of Dermatology and European Academy of Dermatology and Venereology meetings. Expert commentary: There are potential advantages in selective blockade of the IL23-specific p19 subunit with respect to distal blockade of IL-17A or its receptor. Acting upstream in the IL-23/IL-17 cytokine pathway is likely to reduce the expression of multiple pro-inflammatory cytokines acting on keratinocytes -including IL-17F, IL-21 and IL-22-, in addition to IL-17A. On the other hand, safety data thus far suggest that these drugs might be devoid of some adverse effects of IL-17A blockade that seem to be class related, such as mucocutaneous Candida infections or triggering or worsening of inflammatory bowel disease. Specific IL-23p19 blockade with high-affinity monoclonal antibodies seems to be able to induce long-term remissions of the activity in psoriasis and might eventually represent a paradigm change in the treatment of psoriasis. The results of phase III and comparative head-to-head trials with these agents are eagerly awaited.",
+      "identifiers": {
+        "pmid": "28165883",
+        "doi": "10.1080/1744666x.2017.1292137"
+      },
+      "linked": [],
+      "data": {
+        "journal": "Expert Rev Clin Immunol",
+        "authors": "Puig L.",
+        "pubTypes": [
+          "Review",
+          "Journal Article"
+        ],
+        "citedByCount": 109,
+        "openAccess": false,
+        "hasAbstract": true
+      }
+    },
+    {
+      "id": "pmid:28770513",
+      "kind": "publication",
+      "source": "Europe PMC",
+      "title": "Selective Interleukin-23 p19 Inhibition: Another Game Changer in Psoriasis? Focus on Risankizumab.",
+      "url": "https://europepmc.org/article/MED/28770513",
+      "retrievedAt": "2026-10-24T18:42:34.189Z",
+      "year": 2017,
+      "excerpt": "The history of psoriasis treatment has been marked by several milestones. Corticosteroids, cyclosporine, tumor necrosis factor alpha (TNF-α) inhibitors and, more recently, interleukin (IL)-17A inhibitors have revolutionized the treatment of psoriasis, each in its own way and time. The IL-23/IL-17 axis is currently considered to be crucial in the pathogenesis of psoriasis and selective IL-23p19 inhibition may bring several advantages with respect to IL-12/23p40 inhibition, or distal blockade of IL-17A or its receptor. In fact, IL-12 axis inhibition does not appear to be essential in psoriasis and IL-12 inhibition may even have a negative effect in the treatment of psoriasis and have potential risks in tumor immune surveillance and in host defense against intracellular pathogens. On the other hand, contrary to IL-17 inhibition, IL-23p19 blockade does not increase the risk of candida infec…",
+      "text": "The history of psoriasis treatment has been marked by several milestones. Corticosteroids, cyclosporine, tumor necrosis factor alpha (TNF-α) inhibitors and, more recently, interleukin (IL)-17A inhibitors have revolutionized the treatment of psoriasis, each in its own way and time. The IL-23/IL-17 axis is currently considered to be crucial in the pathogenesis of psoriasis and selective IL-23p19 inhibition may bring several advantages with respect to IL-12/23p40 inhibition, or distal blockade of IL-17A or its receptor. In fact, IL-12 axis inhibition does not appear to be essential in psoriasis and IL-12 inhibition may even have a negative effect in the treatment of psoriasis and have potential risks in tumor immune surveillance and in host defense against intracellular pathogens. On the other hand, contrary to IL-17 inhibition, IL-23p19 blockade does not increase the risk of candida infec…\nSelective Interleukin-23 p19 Inhibition: Another Game Changer in Psoriasis? Focus on Risankizumab.\nThe history of psoriasis treatment has been marked by several milestones. Corticosteroids, cyclosporine, tumor necrosis factor alpha (TNF-α) inhibitors and, more recently, interleukin (IL)-17A inhibitors have revolutionized the treatment of psoriasis, each in its own way and time. The IL-23/IL-17 axis is currently considered to be crucial in the pathogenesis of psoriasis and selective IL-23p19 inhibition may bring several advantages with respect to IL-12/23p40 inhibition, or distal blockade of IL-17A or its receptor. In fact, IL-12 axis inhibition does not appear to be essential in psoriasis and IL-12 inhibition may even have a negative effect in the treatment of psoriasis and have potential risks in tumor immune surveillance and in host defense against intracellular pathogens. On the other hand, contrary to IL-17 inhibition, IL-23p19 blockade does not increase the risk of candida infection, nor is it associated with inflammatory bowel disease worsening. Several IL-23p19 inhibitors are currently being developed for the treatment of psoriasis, such as tildrakizumab, guselkumab, and risankizumab. Although clinical data on risankizumab is still scarce, it has shown characteristics that signify a major advance in the treatment of this disease, offering comparable or higher efficacy than IL-17 inhibitors, without the safety concerns of this therapeutic class, combined with the excellent dosing regimen of ustekinumab. Currently, only phase II trial data is available; thus, the results of the large phase III trials will be essential to establish the efficacy and safety profile of risankizumab and its value in the biological armamentarium for the treatment of psoriatic patients.",
+      "identifiers": {
+        "pmid": "28770513",
+        "doi": "10.1007/s40265-017-0794-1"
+      },
+      "linked": [],
+      "data": {
+        "journal": "Drugs",
+        "authors": "Torres T.",
+        "pubTypes": [
+          "Review",
+          "Journal Article"
+        ],
+        "citedByCount": 23,
+        "openAccess": false,
+        "hasAbstract": true
+      }
+    },
+    {
+      "id": "pmid:29897790",
+      "kind": "publication",
+      "source": "Europe PMC",
+      "title": "A safety evaluation of guselkumab for the treatment of psoriasis.",
+      "url": "https://europepmc.org/article/MED/29897790",
+      "retrievedAt": "2026-10-24T18:42:34.189Z",
+      "year": 2018,
+      "excerpt": "Introduction Guselkumab is a fully human monoclonal IgG1λ antibody for the treatment of plaque psoriasis that inhibits interleukin (IL)-23p19 subunit, reducing the proliferation of type 17 helper T (Th-17) cells and thus production of Th-17-derived pro-inflammatory cytokines, especially IL-17 and IL-22. Areas covered: In the following article, the mechanism of action and mainly the efficacy and safety profile of guselkumab available from results of trials will be discussed. We summarized these data after a literature review including PubMed search, relating proceedings and abstracts from relevant international conferences, assessment reports from European and United States regulatory agencies and treatment guidelines up to April 2018. Expert opinion: The central role of IL-23 in psoriasis pathogenesis is supported by genetic links of IL-23 and IL-23R alleles to psoriasis susceptibility;…",
+      "text": "Introduction Guselkumab is a fully human monoclonal IgG1λ antibody for the treatment of plaque psoriasis that inhibits interleukin (IL)-23p19 subunit, reducing the proliferation of type 17 helper T (Th-17) cells and thus production of Th-17-derived pro-inflammatory cytokines, especially IL-17 and IL-22. Areas covered: In the following article, the mechanism of action and mainly the efficacy and safety profile of guselkumab available from results of trials will be discussed. We summarized these data after a literature review including PubMed search, relating proceedings and abstracts from relevant international conferences, assessment reports from European and United States regulatory agencies and treatment guidelines up to April 2018. Expert opinion: The central role of IL-23 in psoriasis pathogenesis is supported by genetic links of IL-23 and IL-23R alleles to psoriasis susceptibility;…\nA safety evaluation of guselkumab for the treatment of psoriasis.\nIntroduction Guselkumab is a fully human monoclonal IgG1λ antibody for the treatment of plaque psoriasis that inhibits interleukin (IL)-23p19 subunit, reducing the proliferation of type 17 helper T (Th-17) cells and thus production of Th-17-derived pro-inflammatory cytokines, especially IL-17 and IL-22. Areas covered: In the following article, the mechanism of action and mainly the efficacy and safety profile of guselkumab available from results of trials will be discussed. We summarized these data after a literature review including PubMed search, relating proceedings and abstracts from relevant international conferences, assessment reports from European and United States regulatory agencies and treatment guidelines up to April 2018. Expert opinion: The central role of IL-23 in psoriasis pathogenesis is supported by genetic links of IL-23 and IL-23R alleles to psoriasis susceptibility; early clinical trials have demonstrated that sufficient inhibition of IL-23p19 results in rapid resolution of the disease. Targeting IL-23, may be responsible for the high efficacy and durable responses of guselkumab, avoiding some adverse effects of IL-17A blockade, like mucocutaneous candida infections or triggering/worsening of inflammatory bowel disease, experienced with agents acting selectively against this molecule and that seem to be class related.",
+      "identifiers": {
+        "pmid": "29897790",
+        "doi": "10.1080/14740338.2018.1488963"
+      },
+      "linked": [],
+      "data": {
+        "journal": "Expert Opin Drug Saf",
+        "authors": "Galluzzo M, D'Adamio S, Campione E, Bianchi L, Talamonti M.",
+        "pubTypes": [
+          "Review",
+          "Journal Article"
+        ],
+        "citedByCount": 12,
+        "openAccess": false,
+        "hasAbstract": true
+      }
+    },
+    {
+      "id": "pmcid:PMC8832456",
+      "kind": "publication",
+      "source": "Europe PMC",
+      "title": "P24 Ankylosing spondylitis & uveitis - challenges in management",
+      "url": "https://europepmc.org/article/PMC/PMC8832456",
+      "retrievedAt": "2026-10-24T18:42:34.189Z",
+      "year": 2021,
+      "excerpt": "Abstract Case report - Introduction Ankylosing spondylitis is a chronic inflammatory condition involving spine, chest and sacroiliac joints. It can be associated with extra spinal manifestations which include uveitis and enthesitis, as well as other features of an inflammatory spondyloarthropathy including psoriasis and inflammatory bowel disease. It is characterised by the presence of inflammatory back pain, limited range of spinal movement, sacroiliitis on imaging, excess spinal bone formation and a high prevalence of HLA-B27. The main aims of treatment are to improve symptoms and retain function as well as to prevent disease complications. Case report - Case description A 49-year-old male diagnosed with ankylosing spondylitis at the age of 23 (HLA-B27 positive, classical radiographic features on plain radiographs and MRI), with background of meningitis and subsequent epilepsy (not on…",
+      "text": "Abstract Case report - Introduction Ankylosing spondylitis is a chronic inflammatory condition involving spine, chest and sacroiliac joints. It can be associated with extra spinal manifestations which include uveitis and enthesitis, as well as other features of an inflammatory spondyloarthropathy including psoriasis and inflammatory bowel disease. It is characterised by the presence of inflammatory back pain, limited range of spinal movement, sacroiliitis on imaging, excess spinal bone formation and a high prevalence of HLA-B27. The main aims of treatment are to improve symptoms and retain function as well as to prevent disease complications. Case report - Case description A 49-year-old male diagnosed with ankylosing spondylitis at the age of 23 (HLA-B27 positive, classical radiographic features on plain radiographs and MRI), with background of meningitis and subsequent epilepsy (not on…\nP24 Ankylosing spondylitis & uveitis - challenges in management\nAbstract Case report - Introduction Ankylosing spondylitis is a chronic inflammatory condition involving spine, chest and sacroiliac joints. It can be associated with extra spinal manifestations which include uveitis and enthesitis, as well as other features of an inflammatory spondyloarthropathy including psoriasis and inflammatory bowel disease. It is characterised by the presence of inflammatory back pain, limited range of spinal movement, sacroiliitis on imaging, excess spinal bone formation and a high prevalence of HLA-B27. The main aims of treatment are to improve symptoms and retain function as well as to prevent disease complications. Case report - Case description A 49-year-old male diagnosed with ankylosing spondylitis at the age of 23 (HLA-B27 positive, classical radiographic features on plain radiographs and MRI), with background of meningitis and subsequent epilepsy (not on treatment since the age of 13), severe hip osteoarthritis and osteoporosis. He has peripheral elbow and knee synovitis. At the age of 27 he developed sight-threatening bilateral recurrent anterior uveitis complicated by cystoid macular oedema (causing central vision loss). Initial management included anti-inflammatories and steroids. He progressed to biologics but developed a rash on adalimumab. He was switched to infliximab in 2010. In 2015 it was switched due to reduced response to golimumab which was non-beneficial. Subsequently he was switched to etanercept but after 3 months it was discontinued due to eye flare. The patient’s therapy was switched to certolizumab, which was non-beneficial for spine and discontinued. In 2016, infliximab was retried as the patient thought it worked best. Unfortunately, in 2018 patient developed Infliximab antibodies and treatment was changed to secukinumab. After 9 months this was stopped owing to ongoing active eye and spine disease. Adalimumab was re-tried; however, it was discontinued as it was showing no benefit. In 2020 Eeanercept (Benepali) was re-tried; however, only for 4 months because of severe flare of joint and eye disease. Tofacitinib was commenced but was non-beneficial and hence it was discontinued. Currently he continues on ixekizumab, oral prednisolone and also receives steroid eye and joint injections. On commencing biologics he was on methotrexate; however, the patient stopped. He was switched to mycophenolate mofetil which he remained on for 10 years. It was switched to methotrexate to try and control peripheral inflammatory joint disease better (re-tried for the second time) which the patient has recently discontinued as he felt it was non-beneficial. Case report - Discussion The case is very challenging. The patient’s disease continues to flare despite changing therapies. He continues to get flares in his back disease, eye disease and peripheral synovitis. His latest BASDI was 5.1 and VAS was 9/10. Measurements: intermalleolar distance 15cm, modified Schober’s 4cm, right lateral flexion 3.8cm and left lateral flexion 11cm. His latest MRI of whole spine and SI joints (in 2020) showed signs of previously active seronegative spondyloarthropathy with established cervical and thoracic ankyloses as well as bilateral sacroiliac joint ankylosis. There is a need for repeated steroid injections to the knees as well as the eyes. He continues on oral prednisolone which was first started in 2006. This is associated with multiple side effects, i.e., osteoporosis. The patient has already completed 8 years of bisphosphonate therapy. He is under regular review with the osteoporosis clinic. His bone density scan showed worsening bone mineral density and bisphosphonates had to be restarted. The patient adjusted medications depending on his symptoms. Recently he also discontinued methotrexate as he felt it was of no benefit to him at all. We are very limited at present to find combined medications to manage both the patient’s inflammatory back disease and inflammatory eye disease. Case report - Key learning points This patient was diagnosed with ankylosing spondylitis 26 years ago. To date he has tried 5 different anti-TNF agents (two of which have also been re-tried at a different time point). This failed to control his disease as he continued to experience flares in either inflammatory back or eye disease. The biologic classes were also changed – he has tried one IL-17A agent as well as a JAK-I. Unfortunately, they both failed to control his disease. He currently continues on a second IL-17A; however, he still requires steroid eye and joint injections as well as systemic steroids. Throughout the years he has tried different DMARDs – most recently methotrexate. Unfortunately, the patient decided to discontinue it as he felt it was of no benefit to him. All of the above indicates that there is still a need to find a collaborative treatment option that will control the patient’s inflammatory back disease, inflammatory eye disease and peripheral synovitis. The aim would be, if possible, to decrease the steroid dose as well (currently on prednisolone 15mg daily) in order to prevent the steroid-associated side effects.",
+      "identifiers": {
+        "pmcid": "PMC8832456"
+      },
+      "linked": [],
+      "data": {
+        "journal": "Rheumatol Adv Pract",
+        "authors": "Nowak K, McHenry M, McAvoy C.",
+        "pubTypes": [
+          "Abstract"
+        ],
+        "citedByCount": 0,
+        "openAccess": true,
+        "hasAbstract": true
+      }
+    },
+    {
+      "id": "pmcid:PMC7958765",
+      "kind": "publication",
+      "source": "Europe PMC",
+      "title": "A187 ASSOCIATION OF IL-17 INHIBITOR TREATMENT WITH NEW OR WORSENING INFLAMMATORY BOWEL DISEASE: A CASE SERIES",
+      "url": "https://europepmc.org/article/PMC/PMC7958765",
+      "retrievedAt": "2026-10-24T18:42:34.189Z",
+      "year": 2021,
+      "excerpt": "Abstract Background Interleukin 17 (IL-17) inhibitors, monoclonal antibodies that target IL-17A (secukinumab, ixekizumab) or the IL-17 receptor (brodalumab), are effective treatments for patients with psoriasis (PsO), psoriatic arthritis (PsA), and ankylosing spondylitis (AS). IL-17A inhibitors are rarely associated with new or worsening inflammatory bowel disease (IBD), with an estimated incidence rate of 1.1/1000 patient-exposure years in Crohn’s disease (CD) and 1.0/1000 patient-exposure years in ulcerative colitis. Aims Describe 3 patients treated with IL-17 inhibitors who developed IBD. Methods Case series. Results Case 1: 50 year-old male with PsO developed bloody diarrhea after 2 months of ixekizumab therapy. Colonoscopy showed proctitis with a cobblestone appearance and anal ulceration. He failed topical 5-ASA and repeat colonoscopy 1 month later showed chronic inflammatory chan…",
+      "text": "Abstract Background Interleukin 17 (IL-17) inhibitors, monoclonal antibodies that target IL-17A (secukinumab, ixekizumab) or the IL-17 receptor (brodalumab), are effective treatments for patients with psoriasis (PsO), psoriatic arthritis (PsA), and ankylosing spondylitis (AS). IL-17A inhibitors are rarely associated with new or worsening inflammatory bowel disease (IBD), with an estimated incidence rate of 1.1/1000 patient-exposure years in Crohn’s disease (CD) and 1.0/1000 patient-exposure years in ulcerative colitis. Aims Describe 3 patients treated with IL-17 inhibitors who developed IBD. Methods Case series. Results Case 1: 50 year-old male with PsO developed bloody diarrhea after 2 months of ixekizumab therapy. Colonoscopy showed proctitis with a cobblestone appearance and anal ulceration. He failed topical 5-ASA and repeat colonoscopy 1 month later showed chronic inflammatory chan…\nA187 ASSOCIATION OF IL-17 INHIBITOR TREATMENT WITH NEW OR WORSENING INFLAMMATORY BOWEL DISEASE: A CASE SERIES\nAbstract Background Interleukin 17 (IL-17) inhibitors, monoclonal antibodies that target IL-17A (secukinumab, ixekizumab) or the IL-17 receptor (brodalumab), are effective treatments for patients with psoriasis (PsO), psoriatic arthritis (PsA), and ankylosing spondylitis (AS). IL-17A inhibitors are rarely associated with new or worsening inflammatory bowel disease (IBD), with an estimated incidence rate of 1.1/1000 patient-exposure years in Crohn’s disease (CD) and 1.0/1000 patient-exposure years in ulcerative colitis. Aims Describe 3 patients treated with IL-17 inhibitors who developed IBD. Methods Case series. Results Case 1: 50 year-old male with PsO developed bloody diarrhea after 2 months of ixekizumab therapy. Colonoscopy showed proctitis with a cobblestone appearance and anal ulceration. He failed topical 5-ASA and repeat colonoscopy 1 month later showed chronic inflammatory changes in the transverse colon and rectum. Patient was hospitalized for a right colonic perforation requiring hemicolectomy and loop ileostomy. Pathology showed mucosal ulcerations with acute transmural inflammation of the cecum, ascending colon, and ileum, with crypt architectural distortion and no granulomas. Colonoscopy 6 months later showed chronic mild patchy active colitis with granulomas. Infliximab and methotrexate were started with clinical remission of his CD and partial response of his PsO. Case 2: 39 year-old male with AS who failed golimumab and etanercept started on secukinumab, and reported acute worsening of diarrhea and abdominal pain. Colonoscopy after a year of persistent symptoms showed ulceration of the ileum and ileocecal valve. Biopsies showed mild active chronic ileitis, and architectural distortion with reactive lymphoid follicles in the right colon. He was treated with adalimumab with partial clinical response of his CD and AS. Case 3: 63 year-old female with PsA reported a 3 week history of diarrhea, abdominal pain, and fever. She was maintained on ixekizumab for 4 months and previously failed adalimumab, secukinumab, and etanercept. CT showed diffuse circumferential pancolonic wall thickening and terminal ileal involvement. Stool cultures and C. difficile were negative. CRP was 154.9 mg/L and fecal calprotectin was 1710 mcg/g. Colonoscopy showed patchy erythema and aphthous ulcers in the colon. Terminal ileal biopsies showed crypt architectural distortion and patchy acute inflammation. She started on infliximab therapy. Her diarrhea resolved prior to treatment, with no clinical improvement of her arthritis. Conclusions IL-17 inhibitors are effective in the treatment of PsO, PsA, and AS, however, in all cases described, it is unclear whether IL-17 inhibition led to new-onset IBD, or an exacerbation of previously asymptomatic IBD. Patients being considered for IL-17 inhibition with baseline gastrointestinal symptoms should be investigated for IBD. Funding Agencies None",
+      "identifiers": {
+        "pmcid": "PMC7958765"
+      },
+      "linked": [],
+      "data": {
+        "journal": "J Can Assoc Gastroenterol",
+        "authors": "Liu J, Aruljothy A, Narula N, Marshall J.",
+        "pubTypes": [
+          "Abstract"
+        ],
+        "citedByCount": 0,
+        "openAccess": false,
+        "hasAbstract": true
+      }
+    },
+    {
+      "id": "pmcid:PMC6508278",
+      "kind": "publication",
+      "source": "Europe PMC",
+      "title": "A90 THREE PATIENTS WITH INFLAMMATORY BOWEL DISEASE DIAGNOSED WHILE BEING TREATED WITH SECUKINUMAB FOR PSORIASIS",
+      "url": "https://europepmc.org/article/PMC/PMC6508278",
+      "retrievedAt": "2026-10-24T18:42:34.189Z",
+      "year": 2018,
+      "excerpt": "Abstract Aims We report three cases of inflammatory bowel disease (IBD) in patients on secukinumab, an anti-IL-17A antibody, for psoriasis. Methods Case Review Results Patient one: 49 year old female, with a history of psoriasis managed with secukinumab, presented to hospital with a six-day history of bloody diarrhea. C-reactive protein was >190 mg/L and erythrocyte sedimentation rate was 70 mm/hr. Colonoscopy showed severe colitis. Pathology showed cryptitis, crypt abscesses, crypt architectural irregularity, without granulomatous lesions. She was started on intravenous steroids during her hospitalization and on infliximab for maintenance IBD therapy. Her secukinumab was discontinued. Patient two: 54 year old male with psoriasis that was managed with secukinumab. The patient developed symptoms of diarrhea, occurring 6–7 times per day, shortly after secukinumab exposure. Colonoscopy sho…",
+      "text": "Abstract Aims We report three cases of inflammatory bowel disease (IBD) in patients on secukinumab, an anti-IL-17A antibody, for psoriasis. Methods Case Review Results Patient one: 49 year old female, with a history of psoriasis managed with secukinumab, presented to hospital with a six-day history of bloody diarrhea. C-reactive protein was >190 mg/L and erythrocyte sedimentation rate was 70 mm/hr. Colonoscopy showed severe colitis. Pathology showed cryptitis, crypt abscesses, crypt architectural irregularity, without granulomatous lesions. She was started on intravenous steroids during her hospitalization and on infliximab for maintenance IBD therapy. Her secukinumab was discontinued. Patient two: 54 year old male with psoriasis that was managed with secukinumab. The patient developed symptoms of diarrhea, occurring 6–7 times per day, shortly after secukinumab exposure. Colonoscopy sho…\nA90 THREE PATIENTS WITH INFLAMMATORY BOWEL DISEASE DIAGNOSED WHILE BEING TREATED WITH SECUKINUMAB FOR PSORIASIS\nAbstract Aims We report three cases of inflammatory bowel disease (IBD) in patients on secukinumab, an anti-IL-17A antibody, for psoriasis. Methods Case Review Results Patient one: 49 year old female, with a history of psoriasis managed with secukinumab, presented to hospital with a six-day history of bloody diarrhea. C-reactive protein was >190 mg/L and erythrocyte sedimentation rate was 70 mm/hr. Colonoscopy showed severe colitis. Pathology showed cryptitis, crypt abscesses, crypt architectural irregularity, without granulomatous lesions. She was started on intravenous steroids during her hospitalization and on infliximab for maintenance IBD therapy. Her secukinumab was discontinued. Patient two: 54 year old male with psoriasis that was managed with secukinumab. The patient developed symptoms of diarrhea, occurring 6–7 times per day, shortly after secukinumab exposure. Colonoscopy showed severe pancolitis. Histology showed patchy chronic inflammation, consistent with IBD. He was started on adalimumab and methotrexate therapy, and achieved clinical remission. Secukinumab was discontinued. Patient three: 28 year old male on secukinumab therapy for his psoriasis with good clinical response. Shortly after starting secukinumab he developed diarrhea symptoms, having 3–4 loose bowel movements per day. Fecal calprotectin was elevated at 563.8 mg/kg. Colonoscopy and histology showed colonic mucosa with focal active cryptitis and non-necrotizing granulomas. Secukinumab was discontinued and he was started on ustekinumab for his psoriasis, with clinical response. Conclusions The role of secukinumab in Crohn’s disease has been investigated in a randomised double-blind placebo-controlled trial, which showed IL-17A blockade was not effective in the treatment of Crohn’s disease and resulted in more adverse events when compared to placebo (Hueber et al). In this study, six severe drug-related adverse events were reported in the secukinumab group and one such event in the placebo group; five of these events were worsening of Crohn’s disease. The current evidence suggests that IL-17A blockade is efficacious in psoriasis. A pooled analysis of ten phase II and III studies in patients with plaque psoriasis showed an overall favorable safety profile. In this analysis, three cases of Crohn’s disease were reported among individuals on secukinumab (Malakouti et al). Our cases of inflammatory bowel disease diagnosed in three patients on secukinumab for psoriasis highlight the complex and multifaceted role of the Th17 pathway. The Th17 inflammatory response can be either protective or exacerbating depending on the organ system involved. Funding Agencies None",
+      "identifiers": {
+        "pmcid": "PMC6508278"
+      },
+      "linked": [],
+      "data": {
+        "journal": "J Can Assoc Gastroenterol",
+        "authors": "Shukla T, McCurdy J, Fahim S, Rostom A.",
+        "pubTypes": [
+          "Abstract"
+        ],
+        "citedByCount": 0,
+        "openAccess": false,
+        "hasAbstract": true
+      }
+    }
+  ]
+}

@@ -3,7 +3,7 @@ import fs from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
 import type Anthropic from "@anthropic-ai/sdk";
-import { runInvestigation, type ModelClient } from "./orchestrator";
+import { coerceJsonStrings, runInvestigation, type ModelClient } from "./orchestrator";
 import { SpendLedger } from "./budget";
 import { RunStore } from "./store";
 import { MODELS } from "@/lib/config";
@@ -56,6 +56,17 @@ const goodBrief = {
   unknowns: [],
   nextQuestions: ["Do IL-23 inhibitors differ?"],
 };
+
+describe("coerceJsonStrings", () => {
+  it("parses stringified arrays/objects and leaves other strings alone", () => {
+    expect(coerceJsonStrings({ terms: '["a","b"]', summary: '{"text":"x"}', claim: "[not json", n: 3 })).toEqual({
+      terms: ["a", "b"],
+      summary: { text: "x" },
+      claim: "[not json",
+      n: 3,
+    });
+  });
+});
 
 describe("runInvestigation", () => {
   it("runs a full scripted investigation, enforcing citations and the brief contract", async () => {
