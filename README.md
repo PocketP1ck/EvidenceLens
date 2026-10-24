@@ -18,7 +18,7 @@ You type a question like *"Would blocking IL-17A help patients with Crohn's dise
 
 ---
 
-## Why this matters for drug discovery (no biology background needed)
+## Why this matters for drug discovery 
 
 A drug program usually starts with a **hypothesis**: *"If we block protein X, patients with disease Y will get better."* Before spending years and millions testing it, a team wants to know:
 
