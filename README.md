@@ -55,8 +55,8 @@ We ran both questions with the same agent, the same tools and the same rules, an
 
 | Question | What happened in reality | EvidenceLens verdict | Time | Cost |
 | --- | --- | --- | --- | --- |
-| Block IL-17A in Crohn's? | Trial stopped for futility; drug did worse than placebo | ✅ **Opposed** | 47 s | $0.12 |
-| Block IL-23 in Crohn's? | Phase 3 trials succeeded; drug approved | ✅ **Supported** | 67 s | $0.18 |
+| Block IL-17A in Crohn's? | Trial stopped for futility; drug did worse than placebo |  **Opposed** | 47 s | $0.12 |
+| Block IL-23 in Crohn's? | Phase 3 trials succeeded; drug approved |  **Supported** | 67 s | $0.18 |
 
 **2 out of 2 correct, on a pair designed to fool shortcuts.**
 
