@@ -11,5 +11,5 @@
 - [x] 9. The otter
 - [x] 10. Report view with 3D structure and saved figure
 - [x] 11. Evidence diagram and timeline
-- [ ] 12. IL-23 case, replay mode and edge cases — pause for user review
-- [ ] 13. Polish and video preparation
+- [x] 12. IL-23 case, replay mode and edge cases — pause for user review
+- [x] 13. Polish and video preparation

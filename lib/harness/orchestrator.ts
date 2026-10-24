@@ -204,7 +204,7 @@ async function executeTool(use: Anthropic.Messages.ToolUseBlock, ctx: ToolContex
   const parsed = def.schema.safeParse(coerceJsonStrings(use.input));
   if (!parsed.success) {
     const issues = parsed.error.issues.map((i) => `${i.path.join(".") || "(root)"}: ${i.message}`).join("; ");
-    await emit({ type: "tool_result", tool: use.name, ok: false, summary: `Invalid input: ${issues}` });
+    await emit({ type: "tool_result", tool: use.name, ok: false, summary: `Invalid input: ${issues} | received ${JSON.stringify(use.input).slice(0, 300)}` });
     return { type: "tool_result", tool_use_id: use.id, is_error: true, content: `Invalid input: ${issues}` };
   }
   await emit({ type: "stage", stage: def.stage, label: def.label(parsed.data), tool: def.name, input: parsed.data });
@@ -223,7 +223,13 @@ async function executeTool(use: Anthropic.Messages.ToolUseBlock, ctx: ToolContex
   }
 }
 
-/** Models occasionally send arrays/objects as JSON strings; parse those top-level values before validation. */
+/** Fields that are always string arrays in our tool schemas. */
+const ARRAY_FIELDS = new Set(["terms", "sourceIds", "interventionNames", "findingIds"]);
+
+/**
+ * Models occasionally send arrays/objects as JSON strings, or a single string where a list is
+ * expected. Normalize those top-level values before validation; everything else is untouched.
+ */
 export function coerceJsonStrings(input: unknown): unknown {
   if (!input || typeof input !== "object" || Array.isArray(input)) return input;
   const out: Record<string, unknown> = {};
@@ -233,8 +239,15 @@ export function coerceJsonStrings(input: unknown): unknown {
         out[k] = JSON.parse(v);
         continue;
       } catch {
-        /* keep the original string */
+        /* fall through */
       }
+    }
+    if (typeof v === "string" && ARRAY_FIELDS.has(k)) {
+      out[k] = v
+        .split(/[,;\n]|\s\+\s/)
+        .map((s) => s.trim().replace(/^["']|["']$/g, ""))
+        .filter(Boolean);
+      continue;
     }
     out[k] = v;
   }

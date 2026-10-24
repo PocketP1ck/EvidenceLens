@@ -1,0 +1,235 @@
+{
+  "findings": [
+    {
+      "claim": "Open Targets gives a moderate IL23A–Crohn disease association score (0.61), driven almost entirely by clinical-stage evidence (0.99); literature 0.245 and RNA expression 0.043 are low.",
+      "direction": "supports",
+      "outcome": "not_applicable",
+      "kind": "observation",
+      "sourceIds": [
+        "ot:ENSG00000110944:MONDO_0005011"
+      ],
+      "supportingPassage": "Overall association score 0.61 (datatypes: clinical 0.99, literature 0.245, rna_expression 0.043)",
+      "disease": "Crohn's disease",
+      "limitations": "Scores rank evidence and are not probabilities of success; the clinical score reflects drug trials, not independent genetic evidence.",
+      "id": "F1",
+      "independentStudies": 1,
+      "recordedAt": "2026-10-24T19:01:03.604Z"
+    },
+    {
+      "claim": "Risankizumab is an IL-23 inhibitor antibody acting on IL-23 (including p19/IL23A, Q9NPF7); ChEMBL max phase 4 overall (first approval 2019) with Crohn's disease listed at max phase 3 in this record.",
+      "direction": "context",
+      "outcome": "not_applicable",
+      "kind": "observation",
+      "sourceIds": [
+        "chembl:CHEMBL3990029"
+      ],
+      "supportingPassage": "Mechanism: Interleukin-23 inhibitor (INHIBITOR; target Interleukin-23 P29460,Q9NPF7)",
+      "limitations": "Max phase is development stage, not efficacy; the ChEMBL Crohn's indication phase may lag regulatory status.",
+      "id": "F2",
+      "independentStudies": 1,
+      "recordedAt": "2026-10-24T19:01:03.606Z"
+    },
+    {
+      "claim": "Phase 3 ADVANCE and MOTIVATE induction trials (IV risankizumab 600/1200 mg vs placebo, weeks 0/4/8) met all co-primary endpoints at week 12 (clinical remission and endoscopic response) in moderate-to-severe Crohn's disease; in MOTIVATE (biologic-failure population) CDAI remission was 42%/40% vs 20% placebo and endoscopic response 29%/34% vs 11%.",
+      "direction": "supports",
+      "outcome": "positive",
+      "kind": "observation",
+      "sourceIds": [
+        "pmid:35644154",
+        "ctgov:NCT03104413"
+      ],
+      "supportingPassage": "All coprimary endpoints at week 12 were met in both trials with both doses of risankizumab (p values ≤0·0001).",
+      "intervention": "risankizumab IV 600 mg or 1200 mg",
+      "disease": "Crohn's disease, moderate to severe",
+      "population": "Adults 16-80 y; ADVANCE: biologic or conventional failure; MOTIVATE: biologic failure",
+      "endpoint": "Week 12 clinical remission and endoscopic response",
+      "studyContext": "Randomised double-masked placebo-controlled phase 3; sponsor AbbVie",
+      "limitations": "Sponsor-funded; 12-week induction; placebo-controlled, no active comparator; registry results table has duplicated/mislabelled US vs global rows so the paper was used for numbers.",
+      "id": "F3",
+      "independentStudies": 1,
+      "recordedAt": "2026-10-24T19:01:03.607Z"
+    },
+    {
+      "claim": "In the FORTIFY randomised withdrawal maintenance trial (SC risankizumab q8w, induction responders), 360 mg beat placebo withdrawal at week 52 for CDAI remission (52% vs 41%) and endoscopic response (47% vs 22%).",
+      "direction": "supports",
+      "outcome": "positive",
+      "kind": "observation",
+      "sourceIds": [
+        "pmid:35644155"
+      ],
+      "supportingPassage": "Greater clinical remission and endoscopic response rates were reached with 360 mg risankizumab versus placebo",
+      "intervention": "risankizumab SC 180 or 360 mg q8w",
+      "disease": "Crohn's disease",
+      "population": "Induction responders from ADVANCE/MOTIVATE",
+      "endpoint": "Week 52 clinical remission and endoscopic response",
+      "limitations": "Withdrawal design compares to patients withdrawn from drug (placebo remission 41% is high due to prior response); enriched responder population; sponsor-funded.",
+      "id": "F4",
+      "independentStudies": 1,
+      "recordedAt": "2026-10-24T19:01:03.608Z"
+    },
+    {
+      "claim": "Not all benefit is large or uniform: in FORTIFY, the 180 mg dose did not significantly beat withdrawal on stool-frequency/abdominal-pain remission (p=0.124), and the absolute remission gain vs placebo in induction (~15–22 points) leaves most patients not in remission; the most common AEs included worsening Crohn's disease.",
+      "direction": "opposes",
+      "outcome": "null",
+      "kind": "observation",
+      "sourceIds": [
+        "pmid:35644155"
+      ],
+      "supportingPassage": "but not stool frequency and abdominal pain score clinical remission [p=0·124]",
+      "intervention": "risankizumab SC 180 mg q8w",
+      "disease": "Crohn's disease",
+      "limitations": "One secondary-type comparison for one dose; other co-primary endpoints were met.",
+      "id": "F5",
+      "independentStudies": 1,
+      "recordedAt": "2026-10-24T19:01:03.609Z"
+    },
+    {
+      "claim": "No experimental structure of risankizumab bound to IL23A was found; an AlphaFold model of IL23A (mean pLDDT 80.56) was selected, which is structural confidence only and not disease relevance.",
+      "direction": "context",
+      "outcome": "not_applicable",
+      "kind": "interpretation",
+      "sourceIds": [
+        "alphafold:AF-Q9NPF7-F1"
+      ],
+      "id": "F6",
+      "independentStudies": 1,
+      "recordedAt": "2026-10-24T19:01:08.040Z"
+    }
+  ],
+  "gaps": [
+    {
+      "id": "G1",
+      "description": "Could not retrieve a head-to-head trial (e.g., risankizumab vs ustekinumab) or long-term safety/real-world data in a form that supports comparative claims; real-world studies appeared in search but were not read.",
+      "attempted": "search_trials risankizumab vs ustekinumab Crohn's; search_literature risankizumab crohn ustekinumab (recent)",
+      "recordedAt": "2026-10-24T19:01:03.610Z"
+    }
+  ],
+  "clusters": [
+    {
+      "id": "C1",
+      "label": "Linked records (NCT03104413 ↔ PMID 35644154): one study or report, not independent corroboration",
+      "sourceIds": [
+        "ctgov:NCT03104413",
+        "pmid:35644154"
+      ],
+      "sharedIdentifiers": [
+        "pmid:35644154"
+      ]
+    },
+    {
+      "id": "C2",
+      "label": "Linked records (NCT02513459 ↔ PMID 34077509): one study or report, not independent corroboration",
+      "sourceIds": [
+        "ctgov:NCT02513459",
+        "pmid:34077509"
+      ],
+      "sharedIdentifiers": [
+        "pmid:34077509"
+      ]
+    }
+  ],
+  "comparisons": [],
+  "plan": [
+    {
+      "title": "Resolve entities",
+      "status": "in_progress"
+    },
+    {
+      "title": "Target-disease evidence, compound, structure",
+      "status": "pending"
+    },
+    {
+      "title": "Trials and publications (support)",
+      "status": "pending"
+    },
+    {
+      "title": "Counterevidence search",
+      "status": "pending"
+    },
+    {
+      "title": "Record findings and finalize",
+      "status": "pending"
+    }
+  ],
+  "entities": {
+    "target": {
+      "symbol": "IL23A",
+      "ensemblId": "ENSG00000110944",
+      "uniprot": "Q9NPF7",
+      "name": "interleukin 23 subunit alpha"
+    },
+    "disease": {
+      "id": "MONDO_0005011",
+      "name": "Crohn disease"
+    },
+    "compound": {
+      "name": "risankizumab",
+      "chemblId": "CHEMBL3990029"
+    }
+  },
+  "structure": {
+    "type": "predicted",
+    "sourceId": "alphafold:AF-Q9NPF7-F1",
+    "modelId": "AF-Q9NPF7-F1 v6",
+    "title": "AlphaFold prediction for Interleukin-23 subunit alpha (IL23A)",
+    "fileUrl": "https://alphafold.ebi.ac.uk/files/AF-Q9NPF7-F1-model_v6.pdb",
+    "format": "pdb",
+    "targetChains": [
+      "A"
+    ],
+    "partnerChains": [],
+    "meanPlddt": 80.56,
+    "plddtBands": {
+      "veryHigh": 0.524,
+      "confident": 0.169,
+      "low": 0.243,
+      "veryLow": 0.063
+    },
+    "version": 6,
+    "paeImageUrl": "https://alphafold.ebi.ac.uk/files/AF-Q9NPF7-F1-predicted_aligned_error_v6.png",
+    "identity": {
+      "uniprotAccession": "Q9NPF7",
+      "verified": true,
+      "method": "Model sequence identical to UniProt sequence"
+    },
+    "reason": "Predicted model of the target; no experimental complex with the intervention was found.",
+    "localFile": "af-q9npf7-f1.pdb"
+  },
+  "searches": [
+    {
+      "tool": "search_trials",
+      "intent": "support",
+      "query": "{\"condition\":\"Crohn's disease\",\"intervention\":\"risankizumab\"}",
+      "resultCount": 10,
+      "at": "2026-10-24T19:00:34.674Z"
+    },
+    {
+      "tool": "search_trials",
+      "intent": "support",
+      "query": "{\"condition\":\"Crohn's disease\",\"intervention\":\"risankizumab maintenance OR ustekinumab\"}",
+      "resultCount": 8,
+      "at": "2026-10-24T19:00:38.151Z"
+    },
+    {
+      "tool": "search_literature",
+      "intent": "support",
+      "query": "(TITLE:\"risankizumab\" OR ABSTRACT:\"risankizumab\") AND (TITLE:\"maintenance\" OR ABSTRACT:\"maintenance\") AND (TITLE:crohn* OR ABSTRACT:crohn*)",
+      "resultCount": 5,
+      "at": "2026-10-24T19:00:44.573Z"
+    },
+    {
+      "tool": "search_literature",
+      "intent": "counter",
+      "query": "(TITLE:\"risankizumab\" OR ABSTRACT:\"risankizumab\") AND (TITLE:crohn* OR ABSTRACT:crohn*) AND (TITLE:\"ustekinumab\" OR ABSTRACT:\"ustekinumab\")",
+      "resultCount": 6,
+      "at": "2026-10-24T19:00:44.736Z"
+    },
+    {
+      "tool": "search_trials",
+      "intent": "counter",
+      "query": "{\"condition\":\"Crohn's disease\",\"intervention\":\"risankizumab versus ustekinumab\"}",
+      "resultCount": 2,
+      "at": "2026-10-24T19:00:46.716Z"
+    }
+  ]
+}

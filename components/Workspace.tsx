@@ -56,7 +56,7 @@ export function Workspace({ initial, replay, model }: WorkspaceProps) {
         if (data.type === "finished") {
           es.close();
           setRunning(false);
-          if (!query) refreshList();
+          refreshList();
         }
       };
       es.onerror = () => {
@@ -100,7 +100,8 @@ export function Workspace({ initial, replay, model }: WorkspaceProps) {
 
   async function start(e?: React.FormEvent) {
     e?.preventDefault();
-    if (running) return;
+    // Replay pages never start paid runs.
+    if (running || replay) return;
     setError(null);
     const trimmed = goal.trim();
     if (trimmed.length < 10) return setError("Describe the research goal in a sentence.");
@@ -194,8 +195,12 @@ export function Workspace({ initial, replay, model }: WorkspaceProps) {
                     Stop
                   </button>
                 )}
-                <button type="submit" className={`btn${pressed ? " pressed" : ""}`} disabled={running || typing || goal.trim().length < 10}>
-                  {running ? "Investigating…" : "Begin investigation"}
+                <button
+                  type="submit"
+                  className={`btn${pressed ? " pressed" : ""}`}
+                  disabled={running || typing || goal.trim().length < 10 || (Boolean(replay) && Boolean(activity.finished))}
+                >
+                  {running ? "Investigating…" : activity.finished && replay ? "Investigation complete" : "Begin investigation"}
                   <span aria-hidden="true">→</span>
                 </button>
               </div>

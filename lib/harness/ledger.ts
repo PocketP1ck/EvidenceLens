@@ -137,40 +137,20 @@ export class EvidenceLedger {
     return this.searches.filter((s) => s.intent === "counter").length;
   }
 
-  /** Union-find over shared PMID/PMCID/NCT/DOI, including links (e.g. a trial's results paper). */
+  /**
+   * Study clusters, computed in code:
+   * 1. Trial registrations merge only on the same NCT number or the same sponsor protocol ID
+   *    (core study + its extension).
+   * 2. A publication joins a study when it is linked to exactly one trial cluster (the trial lists
+   *    its PMID, or its abstract names the NCT). Papers linked to several trials (pooled analyses,
+   *    reviews) stay separate and never merge distinct trials.
+   * 3. Publications sharing a PMID/PMCID/DOI merge with each other.
+   */
   clusters(): Cluster[] {
-    const ids = [...this.sources.keys()];
-    const parent = new Map(ids.map((id) => [id, id]));
-    const find = (x: string): string => {
-      const p = parent.get(x)!;
-      if (p === x) return x;
-      const r = find(p);
-      parent.set(x, r);
-      return r;
-    };
-    const union = (a: string, b: string) => {
-      const ra = find(a);
-      const rb = find(b);
-      if (ra !== rb) parent.set(rb, ra);
-    };
-    const keyOwner = new Map<string, string>();
-    const shared = new Map<string, Set<string>>();
-    for (const [id, rec] of this.sources) {
-      const proto = protocolKey(rec);
-      const keys = [...identifierKeys(rec.identifiers), ...rec.linked.flatMap(identifierKeys), ...(proto ? [proto] : [])];
-      for (const k of keys) {
-        const owner = keyOwner.get(k);
-        if (owner) {
-          union(owner, id);
-          const set = shared.get(k) ?? new Set([owner]);
-          set.add(id);
-          shared.set(k, set);
-        } else keyOwner.set(k, id);
-      }
-    }
+    const { parent, shared } = this.studyGraph();
     const groups = new Map<string, string[]>();
-    for (const id of ids) {
-      const r = find(id);
+    for (const id of this.sources.keys()) {
+      const r = parent(id);
       groups.set(r, [...(groups.get(r) ?? []), id]);
     }
     let n = 0;
@@ -191,11 +171,77 @@ export class EvidenceLedger {
       });
   }
 
-  /** Number of distinct studies among the given sources. */
+  private studyGraph() {
+    const ids = [...this.sources.keys()];
+    const par = new Map(ids.map((id) => [id, id]));
+    const find = (x: string): string => {
+      const p = par.get(x)!;
+      if (p === x) return x;
+      const r = find(p);
+      par.set(x, r);
+      return r;
+    };
+    const shared = new Map<string, Set<string>>();
+    const note = (k: string, a: string, b: string) => shared.set(k, (shared.get(k) ?? new Set()).add(a).add(b));
+    const union = (a: string, b: string, key: string) => {
+      note(key, a, b);
+      const ra = find(a);
+      const rb = find(b);
+      if (ra !== rb) par.set(rb, ra);
+    };
+    const recs = [...this.sources.values()];
+    const trials = recs.filter((r) => r.kind === "trial");
+    const pubs = recs.filter((r) => r.kind === "publication");
+
+    // 1. Trials: same NCT or same protocol ID.
+    const trialKey = new Map<string, string>();
+    for (const t of trials) {
+      for (const k of [...identifierKeys({ nct: t.identifiers.nct }), protocolKey(t)].filter((x): x is string => Boolean(x))) {
+        const owner = trialKey.get(k);
+        if (owner) union(owner, t.id, k);
+        else trialKey.set(k, t.id);
+      }
+    }
+    // 3. Publications with the same identifiers.
+    const pubKey = new Map<string, string>();
+    for (const p of pubs) {
+      for (const k of identifierKeys({ pmid: p.identifiers.pmid, pmcid: p.identifiers.pmcid, doi: p.identifiers.doi })) {
+        const owner = pubKey.get(k);
+        if (owner) union(owner, p.id, k);
+        else pubKey.set(k, p.id);
+      }
+    }
+    // 2. Publication ↔ trial links, only when unambiguous.
+    const multiLinked = new Map<string, Set<string>>();
+    for (const p of pubs) {
+      const pkeys = new Set(identifierKeys(p.identifiers));
+      const linkedTrials = trials.filter(
+        (t) => p.linked.some((l) => l.nct && l.nct === t.identifiers.nct) || t.linked.some((l) => identifierKeys(l).some((k) => pkeys.has(k))),
+      );
+      const roots = new Set(linkedTrials.map((t) => find(t.id)));
+      if (roots.size === 1) {
+        const t = linkedTrials[0];
+        const key = t.linked.some((l) => identifierKeys(l).some((k) => pkeys.has(k))) ? identifierKeys(p.identifiers)[0] : `nct:${t.identifiers.nct}`;
+        union(t.id, p.id, key);
+      } else if (roots.size > 1) {
+        multiLinked.set(p.id, roots);
+      }
+    }
+    return { parent: find, shared, multiLinked };
+  }
+
+  /** Number of distinct studies among the given sources. Multi-trial papers add nothing when a linked trial is also cited. */
   independentStudies(sourceIds: string[]): number {
-    const clusterOf = new Map<string, string>();
-    for (const c of this.clusters()) for (const s of c.sourceIds) clusterOf.set(s, c.id);
-    return new Set(sourceIds.map((s) => clusterOf.get(s) ?? s)).size;
+    const { parent, multiLinked } = this.studyGraph();
+    const roots = new Set<string>();
+    const deferred: string[] = [];
+    for (const s of sourceIds) {
+      if (!this.sources.has(s)) continue;
+      if (multiLinked.has(s)) deferred.push(s);
+      else roots.add(parent(s));
+    }
+    for (const s of deferred) if (![...multiLinked.get(s)!].some((r) => roots.has(r))) roots.add(parent(s));
+    return roots.size;
   }
 
   addFinding(input: FindingInput): Finding {

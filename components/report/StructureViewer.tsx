@@ -49,7 +49,8 @@ export function StructureViewer({ runId, structure, hasPng }: { runId: string; s
         v.addModel(data, structure.format === "cif" ? "cif" : "pdb");
         if (structure.type === "predicted") {
           v.setStyle({}, { cartoon: { colorfunc: (atom: { b: number }) => PLDDT.find((p) => atom.b > p.min)!.color, thickness: 0.4 } });
-          v.zoomTo();
+          // Frame the confident core; disordered termini stay visible but don't shrink the view.
+          v.zoomTo({ predicate: (atom: { b: number }) => atom.b >= 70 });
         } else {
           v.setStyle({}, { cartoon: { color: OTHER, opacity: 0.35 } });
           const partners = structure.partnerChains.filter((p) => p.role === "intervention").flatMap((p) => p.chains);

@@ -38,6 +38,25 @@ describe("EvidenceLedger", () => {
     expect(l.independentStudies(["ctgov:NCT00584740", "pmid:22595313"])).toBe(1);
   });
 
+  it("does not merge two different trials that share a pooled-analysis paper", () => {
+    const l = new EvidenceLedger();
+    const a = normalizeStudy(fixture("ctgov-NCT00584740.json"));
+    Object.assign(a, { id: "ctgov:NCT03107793", identifiers: { nct: "NCT03107793" }, linked: [{ pmid: "40357993" }] });
+    (a.data as { orgStudyId?: string }).orgStudyId = "CR108276";
+    const b = normalizeStudy(fixture("ctgov-NCT00584740.json"));
+    Object.assign(b, { id: "ctgov:NCT04655807", identifiers: { nct: "NCT04655807" }, linked: [{ pmid: "40357993" }] });
+    (b.data as { orgStudyId?: string }).orgStudyId = "CR108898";
+    const pooled = normalizePublication(fixture<{ resultList: { result: never[] } }>("epmc-pmid-22595313.json").resultList.result[0]);
+    Object.assign(pooled, { id: "pmid:40357993", identifiers: { pmid: "40357993" }, linked: [] });
+    l.register(a);
+    l.register(b);
+    l.register(pooled);
+    expect(l.clusters()).toEqual([]);
+    expect(l.independentStudies(["ctgov:NCT03107793", "ctgov:NCT04655807"])).toBe(2);
+    // The pooled paper adds no independent study when one of its trials is cited.
+    expect(l.independentStudies(["ctgov:NCT03107793", "pmid:40357993"])).toBe(1);
+  });
+
   it("keeps unrelated registrations apart", () => {
     const l = new EvidenceLedger();
     l.register(normalizeStudy(fixture("ctgov-NCT00584740.json")));

@@ -24,13 +24,13 @@ export function Otter({ pose, size = 300 }: { pose: OtterPose; size?: number }) 
       {/* ---- props behind the otter ---- */}
       <g className={on("finished")} data-layer="finished">
         <g className="o-stack">
-          <rect x="34" y="160" width="50" height="28" rx="3" className="o-paper" />
-          <rect x="38" y="152" width="50" height="28" rx="3" className="o-paper" />
-          <rect x="42" y="144" width="50" height="28" rx="3" className="o-paper" />
-          <path d="M50 154 H80 M50 160 H74" className="o-ink-line" />
+          <rect x="14" y="164" width="52" height="26" rx="3" className="o-paper" />
+          <rect x="17" y="156" width="52" height="26" rx="3" className="o-paper" />
+          <rect x="20" y="148" width="52" height="26" rx="3" className="o-paper" />
+          <path d="M28 158 H60 M28 165 H52" className="o-ink-line" />
         </g>
-        <circle cx="86" cy="140" r="9" className="o-check-ring" />
-        <path d="M81.5 140.5 L85 144 L91 137" className="o-check" pathLength={1} />
+        <circle cx="46" cy="128" r="10" className="o-check-ring" />
+        <path d="M41 128.5 L45 132.5 L51.5 124.5" className="o-check" pathLength={1} />
       </g>
 
       <g className={on("writing")} data-layer="writing">

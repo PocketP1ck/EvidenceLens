@@ -1,0 +1,29 @@
+{
+  "id": "2026-10-24-would-blocking-il-23-p19-fa3c",
+  "goal": "Would blocking the IL-23 p19 subunit help patients with Crohn's disease?",
+  "context": {
+    "target": "IL23A",
+    "disease": "Crohn's disease",
+    "compound": "risankizumab"
+  },
+  "model": "claude-sonnet-5-5",
+  "status": "completed",
+  "createdAt": "2026-10-24T19:00:19.658Z",
+  "steps": 11,
+  "usage": {
+    "inputTokens": 24,
+    "outputTokens": 8787,
+    "cacheReadTokens": 173088,
+    "cacheWriteTokens": 28802,
+    "usd": 0.177232,
+    "calls": 11
+  },
+  "limits": {
+    "perRunCapUsd": 1.5,
+    "maxSteps": 40
+  },
+  "stopReason": "Brief finalized",
+  "title": "IL-23 p19 blockade (risankizumab) in Crohn's disease",
+  "assessment": "supported",
+  "finishedAt": "2026-10-24T19:01:26.300Z"
+}

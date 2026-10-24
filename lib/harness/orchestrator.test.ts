@@ -65,6 +65,7 @@ describe("coerceJsonStrings", () => {
       claim: "[not json",
       n: 3,
     });
+    expect(coerceJsonStrings({ terms: "risankizumab, crohn*", claim: "a, b" })).toEqual({ terms: ["risankizumab", "crohn*"], claim: "a, b" });
   });
 });
 

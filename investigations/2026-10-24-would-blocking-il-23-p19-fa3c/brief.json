@@ -1,0 +1,87 @@
+{
+  "title": "IL-23 p19 blockade (risankizumab) in Crohn's disease",
+  "question": "Would blocking the IL-23 p19 subunit (IL23A) with risankizumab help patients with moderate-to-severe Crohn's disease?",
+  "assessment": "supported",
+  "summary": {
+    "text": "Randomised phase 3 trials show that risankizumab, a p19-directed IL-23 antibody, improved clinical remission and endoscopic response over placebo in induction and maintenance in moderate-to-severe Crohn's disease, including patients who had failed biologics. The benefit is partial, and the evidence is sponsor-funded and placebo-controlled.",
+    "findingIds": [
+      "F3",
+      "F4",
+      "F5"
+    ]
+  },
+  "keyFindings": [
+    {
+      "text": "Induction (ADVANCE/MOTIVATE): all co-primary week-12 endpoints met with 600 and 1200 mg IV; MOTIVATE (biologic-failure) CDAI remission 42%/40% vs 20% placebo, endoscopic response 29%/34% vs 11%.",
+      "findingIds": [
+        "F3"
+      ]
+    },
+    {
+      "text": "Maintenance (FORTIFY, withdrawal design): SC 360 mg q8w gave week-52 CDAI remission 52% vs 41% and endoscopic response 47% vs 22% against withdrawal to placebo.",
+      "findingIds": [
+        "F4"
+      ]
+    },
+    {
+      "text": "Open Targets association 0.61 is dominated by clinical evidence (0.99); literature and expression evidence are low, so the support is largely pharmacological.",
+      "findingIds": [
+        "F1"
+      ]
+    },
+    {
+      "text": "Risankizumab is annotated as an IL-23 inhibitor targeting the p19-containing IL-23 (Q9NPF7).",
+      "findingIds": [
+        "F2"
+      ]
+    }
+  ],
+  "opposingEvidence": [
+    {
+      "text": "Benefit is incomplete: in FORTIFY, 180 mg did not significantly beat withdrawal on stool-frequency/abdominal-pain remission (p=0.124). Absolute induction remission gains were about 15-22 points, so most patients remained out of remission. Worsening Crohn's disease was among the common adverse events.",
+      "findingIds": [
+        "F5"
+      ]
+    }
+  ],
+  "contextDifferences": [
+    {
+      "text": "Induction populations differed: ADVANCE included conventional-therapy and biologic failures, while MOTIVATE included only biologic failures. FORTIFY enrolled induction responders only, so maintenance results do not apply to non-responders.",
+      "findingIds": [
+        "F3",
+        "F4"
+      ]
+    },
+    {
+      "text": "ChEMBL lists Crohn's disease at max phase 3, while the overall max phase is 4. This reflects the annotation only and says nothing about efficacy.",
+      "findingIds": [
+        "F2"
+      ]
+    },
+    {
+      "text": "No experimental risankizumab-IL23A complex was found. The AlphaFold model's pLDDT reflects structural confidence, not disease relevance.",
+      "findingIds": [
+        "F6"
+      ]
+    }
+  ],
+  "limitations": [
+    "Pivotal evidence comes from sponsor-funded (AbbVie) trials. Records for the same study (registry and paper) are not independent.",
+    "Trial comparators were placebo or placebo withdrawal. No head-to-head result was retrieved.",
+    "The registry results table for NCT03104413 had duplicated or mislabelled US vs global rows, so numbers were taken from the publication.",
+    "Only the primary publications were read. Real-world and long-term safety reports were not examined.",
+    "Risankizumab blocks the p19 subunit of IL-23, but this work did not isolate p19-specific effects from IL-23 pathway effects generally."
+  ],
+  "unknowns": [
+    "Comparative efficacy against ustekinumab, anti-TNF and other IL-23 agents in Crohn's disease.",
+    "Durability and long-term safety beyond 52 weeks.",
+    "Efficacy in specific subgroups such as perianal fistulizing and pediatric disease.",
+    "Which patients respond, since no predictive biomarker was identified."
+  ],
+  "nextQuestions": [
+    "How does risankizumab compare with ustekinumab or adalimumab in head-to-head Crohn's disease trials?",
+    "What are the long-term (>52 weeks) safety and durability data from open-label extensions?",
+    "What do real-world cohorts show for patients who failed prior biologics?",
+    "Is there genetic or biomarker evidence that predicts response to p19 blockade?"
+  ]
+}
