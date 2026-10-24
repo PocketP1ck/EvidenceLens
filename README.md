@@ -99,7 +99,75 @@ The otter mascot shows **what the agent is actually doing at that moment**. Its 
 
 Together they cover the path from biology to drug to human results to published conclusions. All seven are free, public and run by major scientific institutions such as EMBL-EBI, the US National Library of Medicine and RCSB.
 
-The agent reaches them through **14 purpose-built tools**, including `resolve_entities`, `search_trials`, `get_trial`, `search_literature`, `get_publication`, `get_structure`, `compare_studies`, `record_finding`, `record_gap` and `finalize_brief`.
+---
+
+## How the agent uses these databases
+
+**The AI never touches the internet itself.** It can only *ask* to use one of 14 tools. Our code makes the actual web request, checks the answer, and hands back a short summary.
+
+### What happens in one tool call
+
+```mermaid
+flowchart LR
+  A["Claude asks:<br/>get_trial NCT00584740"] --> B["Harness validates<br/>the request"]
+  B --> C["Adapter calls<br/>ClinicalTrials.gov"]
+  C --> D["Clean up the<br/>raw response"]
+  D --> E["Save to the<br/>evidence ledger"]
+  E --> F["Short summary<br/>back to Claude"]
+  F --> A
+```
+
+1. **Claude asks.** For example: use `get_trial` with `{ "nctId": "NCT00584740" }`.
+2. **The harness checks the request** against a strict schema. A trial ID must look like `NCT` plus 8 digits, for instance. A malformed request goes back to Claude as an error to fix.
+3. **The screen updates.** The status line shows *"Retrieving NCT00584740"* and the otter switches to its reading pose.
+4. **An adapter makes the web request.** Each database has one small connector in `lib/adapters/` that sends a standard HTTPS request, with a timeout and retries if the server is busy.
+5. **The adapter cleans up the answer.** These databases return large, deeply nested responses. The adapter keeps only the fields that matter and turns them into a standard **source record**: ID, title, link, retrieval time, excerpt, full text and key data.
+6. **The record goes into the evidence ledger.** This is the *only* way a source can exist, which is why the AI can't invent one.
+7. **Claude gets a trimmed text summary**, capped at about 7,000 characters to keep cost low, and decides what to do next.
+
+None of the seven databases need an API key, and all of them are free.
+
+### What each connector asks for and keeps
+
+| Database | What we ask | What we keep |
+| --- | --- | --- |
+| **ClinicalTrials.gov** | Search by disease and drug, then fetch one trial by its NCT number | Phase, randomized or not, number of patients, status and *why it stopped*, eligibility, main endpoint, posted results by group (e.g. "drug 26% vs placebo 65%"), side-effect counts, linked papers |
+| **Europe PMC** | Papers where every search term appears in the title or abstract, sorted by citations so pivotal studies come first | Title, year, journal, citation count, IDs (PMID, PMCID, DOI), and the full abstract as plain text so quotes can be checked word for word |
+| **Open Targets** | A GraphQL query (you list exactly the fields you want): resolve "IL17A" → `ENSG00000112115` and "Crohn disease" → `MONDO_0005011`, then ask how strongly they're linked | Overall link score (0–1) and its breakdown by evidence type, labelled as a **ranking, not a probability** that a drug will work |
+| **UniProt** | The protein entry by accession, e.g. `Q16552` | What the protein does, its exact sequence, and for each feature type how many are experimentally confirmed vs only inferred |
+| **ChEMBL** | The drug by name, then its mechanism (what it targets and how) and its indications (diseases tested, and how far each got) | Development stage per disease. For example, secukinumab is approved for psoriasis but only reached phase 2 in Crohn's. Code also confirms the drug's target is the same protein being investigated |
+| **RCSB PDB** | Every lab-measured structure containing the target protein (44 for IL-17A), then title, resolution and molecule list for each | The structure where one chain is verified as the target and another is named as the drug (for IL-17A: **9SFX**, secukinumab bound to IL-17A). The 3D file is downloaded into the folder |
+| **AlphaFold DB** | The AI-predicted model for the target, used when no lab structure with the drug exists | Model link and confidence scores. Used only if its sequence **exactly matches** UniProt's |
+
+### The other seven tools: reasoning, not retrieval
+
+These tools don't make any web request. They're where the harness enforces the rules.
+
+| Tool | What it does |
+| --- | --- |
+| `update_plan` | Saves the agent's 3–6 step to-do list |
+| `resolve_entities` | Turns plain names into database IDs (uses Open Targets and UniProt for lookup only) |
+| `compare_studies` | Builds a side-by-side trial table *in code* from records already retrieved |
+| `record_finding` | Saves a claim. **Rejected** if it cites a source that wasn't retrieved, or if its quote isn't found word for word |
+| `record_gap` | Saves "I looked for this and couldn't find it", kept separate from negative results |
+| `finalize_brief` | Submits the report. **Rejected** if there was no counterevidence search, or if any opposing finding is missing |
+| `get_target_disease_evidence`, `get_protein`, `get_structure`, `search_compounds`, `search_literature`, `get_publication`, `search_trials`, `get_trial` | The retrieval tools that use the connectors above |
+
+### A real run, step by step (IL-17A, 47 seconds, $0.12)
+
+1. **Plan:** 5 steps.
+2. **Open Targets:** IL17A ↔ Crohn's link is weak (0.1).
+3. **ChEMBL:** secukinumab inhibits IL-17A; it reached phase 2 in Crohn's.
+4. **ClinicalTrials.gov search:** 2 registrations found, the core trial and its extension.
+5. **RCSB PDB:** picks 9SFX and downloads the 3D file.
+6. **ClinicalTrials.gov detail:** the trial was *"terminated prematurely after futility criterion was met."*
+7. **Europe PMC:** the paper reports the drug was ineffective, with more infections than placebo.
+8. **Europe PMC counter-search:** case reports of IBD in patients taking IL-17 blockers.
+9. **Record and write:** 6 findings and 1 gap recorded, the brief written and checked.
+
+In total that was 18 tool calls from 7 AI replies.
+
+**See the raw data yourself, with no AI and no cost:** `npm run probe -- trial NCT00584740` or `npm run probe -- all`.
 
 ---
 
