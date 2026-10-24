@@ -4,7 +4,7 @@
 - [x] 2. ClinicalTrials.gov and Europe PMC adapters
 - [x] 3. Open Targets, UniProt and ChEMBL adapters
 - [x] 4. Structure adapters (AlphaFold DB and RCSB PDB)
-- [ ] 5. Evidence ledger and run store
+- [x] 5. Evidence ledger and run store
 - [ ] 6. Harness loop and tool registry
 - [ ] 7. Brief rendering and first real Sonnet run (IL-17A / Crohn's) — pause for user review
 - [ ] 8. UI shell, streaming and folder list
