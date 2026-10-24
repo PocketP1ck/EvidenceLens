@@ -80,7 +80,7 @@ code, .mono { font-family: var(--mono); font-size: 0.86em; }
 /* ---------- otter stage ---------- */
 .stage { display: grid; justify-items: center; gap: 12px; position: relative; }
 .stage-ring { position: absolute; inset: 6px 10px auto; height: 300px; border-radius: 50%; border: 1px solid var(--line-2); pointer-events: none; }
-.status { text-align: center; min-height: 64px; max-width: 380px; }
+.status { text-align: center; min-height: 64px; max-width: 380px; margin-top: 30px; }
 .status-stage { font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--focus); font-weight: 700; }
 .status-label { font-size: 15px; color: var(--ink); margin-top: 4px; transition: opacity 240ms; }
 .status-prev { font-size: 12.5px; color: var(--ink-3); margin-top: 2px; opacity: 0.8; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 380px; }

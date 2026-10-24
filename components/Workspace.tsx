@@ -133,11 +133,11 @@ export function Workspace({ initial, replay, model }: WorkspaceProps) {
     <>
       <section className="hero">
         <div>
-          <span className="eyebrow">Drug-discovery research, with the counterevidence</span>
-          <h1>What should I investigate?</h1>
+          <span className="eyebrow">AI research agent for drug discovery</span>
+          <h1>Is this drug idea worth pursuing?</h1>
           <p className="lede">
-            Give the agent a hypothesis. It plans, retrieves trials, papers, targets and structures, looks for reasons the idea could be wrong, and leaves a
-            source-backed research folder.
+            Ask a question like the examples below. The agent searches 7 public scientific databases, looks hardest for evidence that the idea fails, and
+            returns a verdict where every claim links to its source.
           </p>
           <form className="goal-form" onSubmit={start}>
             <div className="goal-field">
