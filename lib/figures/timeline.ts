@@ -2,6 +2,7 @@ import type { SourceRecord } from "@/lib/adapters/types";
 import type { TrialData } from "@/lib/adapters/clinicaltrials";
 import type { EvidenceFile } from "@/lib/harness/types";
 import { DIRECTION_COLOR, esc, FONT, PALETTE, wrap } from "./svg";
+import { shortId } from "./evidence-map";
 
 export interface TimelineItem {
   sourceId: string;
@@ -51,7 +52,7 @@ export function timelineItems(evidence: EvidenceFile, sources: SourceRecord[]): 
       items.push({
         sourceId: s.id,
         kind: "publication",
-        label: s.id.replace(/^pmid:/, "PMID "),
+        label: shortId(s.id),
         title: s.title,
         start: s.year + 0.5,
         end: s.year + 0.5,
