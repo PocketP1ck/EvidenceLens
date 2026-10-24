@@ -42,7 +42,23 @@ This is a research-acceleration tool, not a decision-maker. It gives scientists 
 
 ## The proof: two real cases, two opposite answers
 
-We tested the agent on two real, well-documented questions from inflammatory bowel disease (Crohn's disease). Both target the same immune pathway, and history went opposite ways for them.
+### Why these two cases prove it works
+
+To test a research agent fairly, you need questions **where the real answer is already known**, so you can check its work. We picked two drug ideas from Crohn's disease (a chronic inflammatory bowel disease) whose outcomes are settled history:
+
+- **IL-17A and IL-23 sit on the same immune pathway.** IL-23 is the "upstream" signal that tells immune cells to produce IL-17A. On paper, blocking either one should calm the same inflammation.
+- **In real patients, the results went opposite ways.** Blocking IL-17A failed, and the trial was stopped early. Blocking IL-23 worked, and the drug went on to approval for Crohn's.
+
+That makes this a hard test. An agent that reasons from biology alone would say "yes" to both. An agent biased toward negative findings would say "no" to both. **The only way to get both right is to find and read the actual human trial evidence.**
+
+We ran both questions with the same agent, the same tools and the same rules, and compared its verdicts with what happened:
+
+| Question | What happened in reality | EvidenceLens verdict | Time | Cost |
+| --- | --- | --- | --- | --- |
+| Block IL-17A in Crohn's? | Trial stopped for futility; drug did worse than placebo | ✅ **Opposed** | 47 s | $0.12 |
+| Block IL-23 in Crohn's? | Phase 3 trials succeeded; drug approved | ✅ **Supported** | 67 s | $0.18 |
+
+**2 out of 2 correct, on a pair designed to fool shortcuts.**
 
 ### Case 1: "Would blocking IL-17A help Crohn's patients?" → **Opposed**
 
@@ -62,9 +78,24 @@ On paper, this looked promising: IL-17A drives inflammation, and the drug secuki
 
 Same agent, same rules, opposite conclusion. In 67 seconds it found the **phase 3 ADVANCE, MOTIVATE and FORTIFY** results for risankizumab: patients improved over placebo, including people who had already failed other drugs. It still reported the weak spots. The lower maintenance dose missed one endpoint, and most patients still didn't reach remission.
 
-There is **no lab-measured structure of risankizumab bound to its target**. The agent didn't substitute a structure from another drug; it **said so**, showed the AI-predicted AlphaFold model instead, and colored it by how confident the prediction is.
-
 > Two questions, two different verdicts, both matching the published clinical record. The agent isn't biased toward "yes" or toward "no".
+
+### The moment we're proudest of: refusing to fake a picture
+
+For the IL-23 case, the ideal image would show risankizumab bound to its target. **No such structure exists.** Nobody has published one.
+
+A naive tool would grab the closest-looking result. The structure database (RCSB PDB) holds **15 structures of IL-23**, including one with an antibody drug attached (PDB 5NJD). It looks exactly like what you'd want. But that antibody is **briakinumab**, a different drug that grips a *different part* of IL-23. To a non-expert the picture would look perfect, and it would be wrong.
+
+EvidenceLens checked all 15 in code and refused each one, because none of them contained risankizumab. Then it:
+
+1. **said so in the report:** *"No PDB entry among 15 mapped to Q9NPF7 names risankizumab; related complexes were not substituted."*
+2. **used an AI-predicted model instead** (AlphaFold) and **checked it residue by residue** against the official protein sequence before using it;
+3. **colored it by how confident the prediction is.** Deep blue means very confident, yellow and orange mean uncertain. The long, loose tail in yellow and orange is where the prediction is weakest, and the report shows that instead of hiding it;
+4. **labelled what the colors mean and what they don't.** Confidence in a predicted shape says nothing about whether a drug works.
+
+The same rule applied in the IL-17A case. The real structure there (9SFX) also contains a helper antibody that scientists added only to help the protein crystallize. EvidenceLens **identified it and faded it out**, so it isn't mistaken for the drug.
+
+**Why this matters:** the most dangerous AI output is the wrong answer that looks right. EvidenceLens treats "we don't have this" as a valid result, and records it in the evidence ledger as a gap.
 
 ---
 
