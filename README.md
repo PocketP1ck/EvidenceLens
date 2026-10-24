@@ -80,7 +80,7 @@ Same agent, same rules, opposite conclusion. In 67 seconds it found the **phase 
 
 > Two questions, two different verdicts, both matching the published clinical record. The agent isn't biased toward "yes" or toward "no".
 
-### The moment we're proudest of: refusing to fake a picture
+### Refusing to fake a picture
 
 For the IL-23 case, the ideal image would show risankizumab bound to its target. **No such structure exists.** Nobody has published one.
 
