@@ -41,6 +41,8 @@ export interface StructureChoice {
   paeImageUrl?: string;
   identity: { uniprotAccession: string; verified: boolean; method: string };
   reason: string;
+  /** File name inside the run's structures/ folder once downloaded. */
+  localFile?: string;
 }
 
 export interface StructureResult {

@@ -84,16 +84,29 @@ export class EvidenceLedger {
   /** Adapters are the only callers. Re-registering an ID keeps the richer (latest) record. */
   register(rec: SourceRecord): SourceRecord {
     const prev = this.sources.get(rec.id);
+    // Everything shown to the model about a source must be verifiable against its text.
+    const own = rec.text.includes(rec.excerpt) ? rec.text : `${rec.excerpt}\n${rec.text}`;
     const merged: SourceRecord = prev
       ? {
           ...rec,
-          text: rec.text.length >= prev.text.length ? rec.text : prev.text,
+          text: own.length >= prev.text.length ? own : prev.text,
           linked: dedupeIds([...prev.linked, ...rec.linked]),
           identifiers: { ...prev.identifiers, ...stripUndefined(rec.identifiers) },
         }
-      : rec;
+      : { ...rec, text: own };
     this.sources.set(rec.id, merged);
     return merged;
+  }
+
+  /** Add record-derived text that was shown to the model (e.g. formatted trial results). */
+  appendText(id: string, text: string) {
+    const rec = this.sources.get(id);
+    if (rec && !rec.text.includes(text)) rec.text = `${rec.text}\n${text}`;
+  }
+
+  /** Compact view of recorded findings, returned to the model to keep IDs straight. */
+  findingIndex(): string {
+    return this.findings.map((f) => `${f.id} ${f.direction}: ${f.claim.slice(0, 90)}`).join("\n");
   }
 
   registerAll(recs: SourceRecord[]): SourceRecord[] {

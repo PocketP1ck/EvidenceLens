@@ -138,7 +138,7 @@ type EventBase = { seq: number; at: string };
 export type RunEvent = EventBase &
   (
     | { type: "run_started"; goal: string; model: string }
-    | { type: "stage"; stage: Stage; label: string; tool: string }
+    | { type: "stage"; stage: Stage; label: string; tool: string; input?: unknown }
     | { type: "tool_result"; tool: string; ok: boolean; summary: string; sourceIds?: string[] }
     | { type: "finding"; findingId: string; direction: Direction; claim: string }
     | { type: "usage"; usd: number; runUsd: number }

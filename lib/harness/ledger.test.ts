@@ -65,6 +65,23 @@ describe("EvidenceLedger", () => {
     expect(f.independentStudies).toBe(1);
   });
 
+  it("lets the model quote anything it was shown: excerpts and tool-formatted results", () => {
+    const l = seeded();
+    // Formatted outcome line from get_trial, appended to the record text by the tool.
+    l.appendText("ctgov:NCT00584740", "SECONDARY RESULT — Percentage of Participants Achieving Remission and/or Response: AIN457: 26 (n=39); Placebo: 65 (n=20)");
+    const f = l.addFinding({
+      claim: "Remission/response 26% vs 65% placebo at week 6",
+      direction: "opposes",
+      outcome: "negative",
+      kind: "observation",
+      sourceIds: ["ctgov:NCT00584740"],
+      supportingPassage: "Remission and/or Response: AIN457: 26 (n=39); Placebo: 65 (n=20)",
+    });
+    expect(f.id).toBe("F1");
+    // The excerpt (status line) is verifiable too.
+    expect(passageFound("results posted: yes", l.sources.get("ctgov:NCT00584740")!.text)).toBe(true);
+  });
+
   it("records gaps distinctly from findings", () => {
     const l = seeded();
     l.addGap("No phase 3 IL-17A trial in Crohn's disease was retrieved", "search_trials condition=Crohn intervention=ixekizumab");
